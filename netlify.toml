@@ -1,0 +1,49 @@
+[build]
+  command   = "bash scripts/build.sh"
+  publish   = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  PHP_VERSION  = "8.2"
+
+# --- Redirects -----------------------------------------------------------
+[[redirects]]
+  from   = "/wp-admin/*"
+  to     = "https://your-wordpress-backend.com/wp-admin/:splat"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/wp-json/*"
+  to     = "https://your-wordpress-backend.com/wp-json/:splat"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# --- Headers -------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/wp-content/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# --- Branch deploy previews ----------------------------------------------
+[context.production]
+  command = "bash scripts/build.sh --env production"
+
+[context.deploy-preview]
+  command = "bash scripts/build.sh --env staging"
+
+[context.branch-deploy]
+  command = "bash scripts/build.sh --env staging"
