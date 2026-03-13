@@ -1,0 +1,12 @@
+{
+  "apiVersion": 2,
+  "name": "gm/gallery-grid",
+  "title": "Gallery Grid",
+  "description": "Responsive image grid with hover effects",
+  "category": "formatting",
+  "attributes": {
+    "title": {"type": "string", "default": "Gallery"},
+    "images": {"type": "array", "default": []}
+  },
+  "supports": {"align": ["wide", "full"]}
+}

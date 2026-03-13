@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/how-it-works-section",
+  "title": "How it works Section",
+  "description": "How it works Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "how-it-works-section.php"
+  },
+  "editorScript": "file:./how-it-works-section.js",
+  "viewScript": "file:./how-it-works-section.js"
+}

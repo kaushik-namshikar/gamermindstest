@@ -1,0 +1,51 @@
+.gm-language-grid {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.gm-language-grid__heading {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.gm-language-grid__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.gm-language-grid__item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem;
+  min-height: 80px;
+  position: relative;
+}
+
+.gm-language-grid__remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gm-language-grid__add {
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,175 @@
+.gm-split-cards {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.5) 0%, rgba(30, 30, 60, 0.5) 100%);
+}
+
+.gm-split-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gm-split-cards__card {
+  border-radius: 2rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Left Card - Developer Path (Blue) */
+.gm-split-cards__card.gm-split-cards__left {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.5) 0%, rgba(25, 40, 80, 0.5) 100%);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15), inset 0 0 40px rgba(59, 130, 246, 0.05);
+}
+
+.gm-split-cards__card.gm-split-cards__left:hover {
+  background: linear-gradient(135deg, rgba(37, 74, 180, 0.6) 0%, rgba(30, 50, 100, 0.6) 100%);
+  border-color: rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 80px rgba(59, 130, 246, 0.3), inset 0 0 60px rgba(59, 130, 246, 0.1);
+  transform: translateY(-12px) scale(1.02);
+}
+
+/* Right Card - Player Path (Orange) */
+.gm-split-cards__card.gm-split-cards__right {
+  background: linear-gradient(135deg, rgba(138, 35, 45, 0.5) 0%, rgba(80, 25, 40, 0.5) 100%);
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.15), inset 0 0 40px rgba(249, 115, 22, 0.05);
+}
+
+.gm-split-cards__card.gm-split-cards__right:hover {
+  background: linear-gradient(135deg, rgba(180, 50, 60, 0.6) 0%, rgba(100, 30, 50, 0.6) 100%);
+  border-color: rgba(249, 115, 22, 0.7);
+  box-shadow: 0 0 80px rgba(249, 115, 22, 0.3), inset 0 0 60px rgba(249, 115, 22, 0.1);
+  transform: translateY(-12px) scale(1.02);
+}
+
+/* Gradient overlay background for depth */
+.gm-split-cards__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gm-split-cards__title {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gm-split-cards__card.gm-split-cards__left .gm-split-cards__title {
+  color: #93c5fd;
+}
+
+.gm-split-cards__card.gm-split-cards__right .gm-split-cards__title {
+  color: #fed7aa;
+}
+
+.gm-split-cards__description {
+  margin: 0 0 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.gm-split-cards__card.gm-split-cards__left .gm-split-cards__description {
+  color: rgba(193, 230, 252, 0.85);
+}
+
+.gm-split-cards__card.gm-split-cards__right .gm-split-cards__description {
+  color: rgba(254, 214, 165, 0.85);
+}
+
+.gm-split-cards__card .gm-btn {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.gm-split-cards__card.gm-split-cards__left .gm-btn--primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: #60a5fa;
+}
+
+.gm-split-cards__card.gm-split-cards__left .gm-btn--primary:hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+.gm-split-cards__card.gm-split-cards__right .gm-btn--secondary {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.1) 100%);
+  border-color: rgba(249, 115, 22, 0.6);
+  color: #fed7aa;
+}
+
+.gm-split-cards__card.gm-split-cards__right .gm-btn--secondary:hover {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.4) 0%, rgba(249, 115, 22, 0.3) 100%);
+  border-color: #fb923c;
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.4);
+}
+
+/* Shine effect on hover */
+@keyframes shine-effect {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.gm-split-cards__card:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+  z-index: 0;
+  animation: shine-effect 0.6s ease-in;
+}
+
+@media (max-width: 768px) {
+  .gm-split-cards {
+    padding: 3rem 1rem;
+  }
+
+  .gm-split-cards__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gm-split-cards__card {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .gm-split-cards__title {
+    font-size: 1.5rem;
+  }
+
+  .gm-split-cards__description {
+    font-size: 1rem;
+  }
+}

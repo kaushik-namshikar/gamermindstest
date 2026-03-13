@@ -1,0 +1,97 @@
+//FONT FAMILY
+$primary-font: 'Urbanist', sans-serif;
+$secondary-font: 'SF Pro Display', sans-serif;
+
+$white: white;
+$black: black;
+/* ======================================================
+   BRAND COLORS (Primary Reds)
+====================================================== */
+
+$color-primary-100: rgba(255, 80, 85, 1); // Light primary red
+$color-primary-200: rgba(255, 54, 60, 1); // Bright primary red
+$color-primary-300: rgba(244, 82, 87, 1); // Soft accent red
+$color-primary-400: rgba(227, 30, 36, 1); // Base brand red
+$color-primary-500: rgba(192, 26, 30, 1); // Dark brand red
+
+
+/* ======================================================
+   NEUTRAL – DARK SCALE
+====================================================== */
+
+$color-gray-900: rgba(26, 26, 26, 1); // Deep black
+$color-gray-880: rgba(43, 42, 41, 1); // Warm charcoal (NEW)
+$color-gray-850: rgba(45, 45, 45, 1); // Charcoal
+$color-gray-800: rgba(43, 41, 42, 1); // Dark charcoal
+$color-gray-750: rgba(60, 57, 57, 1); // Dark gray
+$color-gray-700: rgba(69, 69, 69, 1); // Medium-dark gray
+$color-gray-600: rgba(105, 104, 104, 1); // Medium gray
+$color-gray-500: rgba(123, 123, 123, 1); // Mid gray
+$color-gray-400: rgba(114, 114, 114, 1); // Soft gray
+$color-gray-300: rgba(148, 148, 148, 1); // Light gray
+$color-gray-200: rgba(215, 215, 215, 1); // Very light gray
+
+
+/* ======================================================
+   NEUTRAL – WARM / BEIGE SCALE (NEW)
+====================================================== */
+
+$color-beige-50: rgba(245, 240, 235, 1); // Light warm background
+$color-beige-100: rgba(243, 241, 239, 1); // Soft warm surface
+$color-beige-200: rgba(235, 226, 215, 1); // Base beige
+$color-beige-400: rgba(138, 137, 124, 1); // Warm muted text
+
+$color-beige-100-60: rgba(243, 241, 239, 0.6);
+$color-beige-200-80: rgba(235, 226, 215, 0.8);
+$color-beige-200-12: rgba(235, 226, 215, 0.12);
+
+
+$color-gray-400-24: rgba(114, 114, 114, 0.24);
+$search-box-color: rgba(239, 239, 242, 0.16);
+$search-box-ph: rgba(215, 215, 215, 0.72);
+$faq-title: rgba(215, 215, 215, 0.8);
+$faq-border: rgba(75, 75, 75, 1);
+$info-card-bg: rgba(233, 231, 229, 1);
+$vault-card-bg: rgba(247, 234, 232, 1);
+
+/* ======================================================
+   TEXT COLORS
+====================================================== */
+
+$text-primary: $color-gray-900;
+$text-secondary: $color-gray-600;
+$text-muted: rgba(114, 114, 114, 0.6);
+$text-inverse: rgba(255, 255, 255, 0.6);
+$text-warm: $color-beige-400; // NEW
+
+
+/* ======================================================
+   BACKGROUNDS
+====================================================== */
+
+$bg-primary: $color-primary-400;
+$bg-dark: $color-gray-900;
+$bg-surface: $color-gray-850;
+$bg-light: $color-gray-200;
+
+$bg-warm-light: $color-beige-50; // NEW
+$bg-warm-surface: $color-beige-100; // NEW
+$bg-warm-base: $color-beige-200; // NEW
+
+
+/* ======================================================
+   BORDERS & DIVIDERS
+====================================================== */
+
+$border-default: $color-gray-300;
+$border-strong: $color-gray-750;
+$border-warm: $color-beige-200-80; // NEW
+
+
+/* ======================================================
+   OVERLAYS / TRANSPARENCY
+====================================================== */
+
+$overlay-light: rgba(43, 41, 42, 0.05);
+$overlay-dark: rgba(60, 57, 57, 0.8);
+$overlay-warm-soft: $color-beige-200-12; // NEW

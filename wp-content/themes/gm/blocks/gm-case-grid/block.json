@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas/wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/case-grid",
+  "title": "Case Studies Grid",
+  "description": "Grid of case studies or portfolio items with images and details.",
+  "category": "gm",
+  "icon": "portfolio",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "Case Studies"
+    },
+    "cases": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Fantasy Quest",
+          "image": "https://images.unsplash.com/photo-1635541860441-72b745aa7124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwUlBHJTIwZ2FtZSUyMGNvdmVyJTIwYXJ0fGVufDF8fHx8MTc3MjY4Mzk1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+          "languages": "12 languages",
+          "description": "Complete localization for this popular RPG game."
+        },
+        {
+          "title": "Cyber Warriors",
+          "image": "https://images.unsplash.com/photo-1580327332925-a10e6cb11baa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjB2aWRlbyUyMGdhbWUlMjBjb3ZlcnxlbnwxfHx8fDE3NzI2ODM5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "languages": "8 languages",
+          "description": "Action game localization with cultural adaptation."
+        },
+        {
+          "title": "Pixel Legends",
+          "image": "https://images.unsplash.com/photo-1660507224958-729c18ba1277?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMGdhbWUlMjBwaXhlbCUyMGFydHxlbnwxfHx8fDE3NzI2Nzk5MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "languages": "6 languages",
+          "description": "Indie game localization for global markets."
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

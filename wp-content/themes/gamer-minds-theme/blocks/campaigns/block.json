@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/campaigns",
+  "title": "Players — Active Campaigns",
+  "description": "3-column campaign cards with vote UI. Mirrors the Active Campaigns section of Players.tsx.",
+  "category": "formatting",
+  "keywords": ["campaigns", "games", "voting"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

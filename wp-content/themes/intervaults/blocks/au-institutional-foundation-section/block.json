@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/institutional-foundation-section-section",
+  "title": "Institutional Foundation Section",
+  "description": "Institutional Foundation Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "au-institutional-foundation-section.php"
+  }
+}

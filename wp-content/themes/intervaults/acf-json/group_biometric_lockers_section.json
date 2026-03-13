@@ -1,0 +1,255 @@
+{
+    "key": "group_biometric_lockers_section",
+    "title": "Biometric Lockers Section",
+    "fields": [
+        {
+            "key": "field_a1b2c3d9",
+            "label": "Label",
+            "name": "biometric_lockers_section_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Small text above heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_b2c3d4e0",
+            "label": "Title",
+            "name": "biometric_lockers_section_title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Main left-side heading.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_c3d4e5f1",
+            "label": "Items",
+            "name": "biometric_lockers_section_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Each row contains one locker image and one card.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "field_d4e5f6a2",
+            "button_label": "Add Locker Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_d4e5f6a2",
+                    "label": "Item Title",
+                    "name": "biometric_lockers_section_item_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_e5f6a7b3",
+                    "label": "Item Description",
+                    "name": "biometric_lockers_section_item_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 3,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_f6a7b8c4",
+                    "label": "Locker Image",
+                    "name": "biometric_lockers_section_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_a7b8c9d5",
+                    "label": "Card Icon",
+                    "name": "biometric_lockers_section_icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Optional small icon before title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_b8c9d0e6",
+                    "label": "Width Text",
+                    "name": "biometric_lockers_section_item_width",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Example: Width: 640mm",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_c9d0e1f7",
+                    "label": "Height Text",
+                    "name": "biometric_lockers_section_item_height",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Example: Height: 325mm",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c3d4e5f1"
+                },
+                {
+                    "key": "field_d0e1f2a8",
+                    "label": "Depth Text",
+                    "name": "biometric_lockers_section_item_depth",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Example: Depth: 490mm",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c3d4e5f1"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/biometric-lockers-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1772073000
+}

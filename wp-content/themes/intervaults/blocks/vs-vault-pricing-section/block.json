@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/vs-vault-pricing-section-section",
+  "title": "VS Vault Pricing Section",
+  "description": "VS Vault Pricing Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "vs-vault-pricing-section.php"
+  }
+}

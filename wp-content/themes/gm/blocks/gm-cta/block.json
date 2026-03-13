@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/cta",
+  "version": "1.0.0",
+  "title": "Call to Action",
+  "category": "gm",
+  "description": "Prominent call-to-action section with heading, text, and button.",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Ready to Localize Your Game?"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Get started with professional game localization services today."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#contact"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "var(--gm-color-primary)"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "var(--gm-color-white)"
+    },
+    "buttonStyle": {
+      "type": "string",
+      "default": "primary",
+      "enum": ["primary", "secondary", "outline"]
+    }
+  },
+  "textdomain": "gamer-minds-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

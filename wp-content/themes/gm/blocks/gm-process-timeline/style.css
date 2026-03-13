@@ -1,0 +1,270 @@
+.gm-process-timeline {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.gm-process-timeline__heading {
+  margin: 0 0 4rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gm-text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+.gm-process-timeline__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 2rem 0;
+}
+
+.gm-process-timeline__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 0 0 180px;
+  min-width: 180px;
+}
+
+/* Step number badge */
+.gm-process-timeline__step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 3;
+  border: 3px solid rgba(168, 85, 247, 0.3);
+}
+
+/* Animated glow on step number */
+@keyframes pulse-number {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.7), inset 0 0 30px rgba(255, 255, 255, 0.15);
+  }
+}
+
+.gm-process-timeline__step-number {
+  animation: pulse-number 3s ease-in-out infinite;
+}
+
+/* Content card */
+.gm-process-timeline__step-content {
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(88, 80, 235, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border: 2px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.1), inset 0 0 40px rgba(168, 85, 247, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gm-process-timeline__step-content:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  background: linear-gradient(135deg, rgba(88, 80, 235, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+  box-shadow: 0 0 60px rgba(168, 85, 247, 0.3), inset 0 0 40px rgba(168, 85, 247, 0.1);
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* Gradient overlay effect */
+.gm-process-timeline__step-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gm-process-timeline__step-content:hover::before {
+  opacity: 1;
+}
+
+/* Icon styling */
+.gm-process-timeline__step-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.15));
+  border-radius: 1rem;
+  border: 2px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Title styling */
+.gm-process-timeline__step-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--gm-text);
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Description styling */
+.gm-process-timeline__step-description {
+  margin: 0;
+  color: rgba(243, 244, 255, 0.7);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+
+/* Connecting line between steps */
+.gm-process-timeline__connector {
+  position: absolute;
+  top: 30px;
+  left: calc(100% + 12px);
+  width: calc(100% - 24px);
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #a855f7 0%, 
+    #7c3aed 25%, 
+    #2563eb 50%, 
+    #7c3aed 75%, 
+    #a855f7 100%);
+  z-index: 1;
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Arrow tip on connector */
+.gm-process-timeline__connector::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* Animated flow effect on connector */
+@keyframes flow {
+  0% {
+    opacity: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.gm-process-timeline__connector::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 2px;
+  animation: flow 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gm-process-timeline__container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .gm-process-timeline__step {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .gm-process-timeline__connector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .gm-process-timeline {
+    padding: 3rem 1rem;
+  }
+
+  .gm-process-timeline__heading {
+    font-size: 1.875rem;
+  }
+
+  .gm-process-timeline__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .gm-process-timeline__step {
+    flex: 1;
+    width: 100%;
+  }
+
+  .gm-process-timeline__step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .gm-process-timeline__step-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .gm-process-timeline__step-title {
+    font-size: 1.1rem;
+  }
+
+  .gm-process-timeline__step-description {
+    font-size: 0.9rem;
+  }
+}
+
+  .gm-process-timeline__heading {
+    font-size: 2rem;
+  }
+
+  .gm-process-timeline__container {
+    gap: 2rem;
+  }
+
+  .gm-process-timeline__step-content {
+    padding: 1.5rem 1rem;
+  }
+}

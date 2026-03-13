@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/services-grid",
+  "title": "Services Grid",
+  "description": "Grid of service cards with icon, title, and description, matching Gamer Minds brand.",
+  "category": "gm",
+  "icon": "grid-view",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "Our Services"
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "globe",
+          "title": "Translation",
+          "description": "Native-speaking translators with gaming expertise."
+        },
+        {
+          "icon": "check",
+          "title": "Editing",
+          "description": "Consistency, quality, and polish."
+        },
+        {
+          "icon": "shield",
+          "title": "LQA",
+          "description": "In-context testing before launch."
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

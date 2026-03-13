@@ -1,0 +1,22 @@
+{
+  "apiVersion": 2,
+  "name": "gm/faq",
+  "title": "FAQ Section",
+  "description": "Frequently asked questions with accordion",
+  "category": "formatting",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Frequently Asked Questions"
+    },
+    "faqs": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true
+  },
+  "render": "file:./render.php"
+}

@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "acf/faq-locker-video-section",
+  "title": "FAQ Locker Video Section",
+  "description": "FAQ hero section with left content and right locker video.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "faq-locker-video-section.php"
+  },
+  "editorScript": "file:./faq-locker-video-section.js",
+  "viewScript": "file:./faq-locker-video-section.js"
+}

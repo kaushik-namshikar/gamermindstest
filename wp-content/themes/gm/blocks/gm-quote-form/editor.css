@@ -1,0 +1,185 @@
+.wp-block-gm-quote-form {
+  padding: var(--gm-spacing-2xl) 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 400px;
+}
+
+.wp-block-gm-quote-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.gm-quote-form__container {
+  max-width: var(--gm-max-width);
+  margin: 0 auto;
+  padding: 0 var(--gm-spacing-md);
+  position: relative;
+  z-index: 2;
+}
+
+.gm-quote-form__content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gm-quote-form__title {
+  font-size: var(--gm-font-size-4xl);
+  font-weight: var(--gm-font-weight-bold);
+  color: var(--gm-color-white);
+  margin-bottom: var(--gm-spacing-md);
+  line-height: 1.2;
+}
+
+.gm-quote-form__subtitle {
+  font-size: var(--gm-font-size-lg);
+  color: var(--gm-color-white);
+  margin-bottom: var(--gm-spacing-xl);
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.gm-quote-form__form {
+  background: var(--gm-color-white);
+  padding: var(--gm-spacing-xl);
+  border-radius: var(--gm-border-radius-lg);
+  box-shadow: var(--gm-shadow-lg);
+  margin-top: var(--gm-spacing-xl);
+}
+
+.gm-quote-form__field-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gm-spacing-md);
+  margin-bottom: var(--gm-spacing-md);
+}
+
+.gm-quote-form__input,
+.gm-quote-form__select,
+.gm-quote-form__textarea {
+  width: 100%;
+  padding: var(--gm-spacing-md);
+  border: 2px solid var(--gm-color-border);
+  border-radius: var(--gm-border-radius-md);
+  font-size: var(--gm-font-size-base);
+  font-family: inherit;
+  transition: all var(--gm-transition-fast);
+  background: var(--gm-color-white);
+  color: var(--gm-color-text-primary);
+}
+
+.gm-quote-form__input:focus,
+.gm-quote-form__select:focus,
+.gm-quote-form__textarea:focus {
+  outline: none;
+  border-color: var(--gm-color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.gm-quote-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  grid-column: 1 / -1;
+  margin-bottom: var(--gm-spacing-md);
+}
+
+.gm-quote-form__select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right var(--gm-spacing-sm) center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  appearance: none;
+}
+
+.gm-quote-form__submit {
+  width: 100%;
+  padding: var(--gm-spacing-md) var(--gm-spacing-xl);
+  background: var(--gm-color-primary);
+  color: var(--gm-color-white);
+  border: none;
+  border-radius: var(--gm-border-radius-md);
+  font-size: var(--gm-font-size-lg);
+  font-weight: var(--gm-font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--gm-transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gm-quote-form__submit:hover {
+  background: var(--gm-color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--gm-shadow-md);
+}
+
+/* Editor-specific styles */
+.block-editor-block-list__block[data-type="gm/quote-form"] {
+  margin-top: var(--gm-spacing-2xl);
+  margin-bottom: var(--gm-spacing-2xl);
+}
+
+/* Responsive Design for Editor */
+@media (max-width: 768px) {
+  .wp-block-gm-quote-form {
+    padding: var(--gm-spacing-xl) 0;
+  }
+
+  .gm-quote-form__title {
+    font-size: var(--gm-font-size-3xl);
+  }
+
+  .gm-quote-form__subtitle {
+    font-size: var(--gm-font-size-base);
+  }
+
+  .gm-quote-form__form {
+    padding: var(--gm-spacing-lg);
+    margin-top: var(--gm-spacing-lg);
+  }
+
+  .gm-quote-form__field-group {
+    grid-template-columns: 1fr;
+    gap: var(--gm-spacing-sm);
+  }
+
+  .gm-quote-form__textarea {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gm-quote-form__container {
+    padding: 0 var(--gm-spacing-sm);
+  }
+
+  .gm-quote-form__title {
+    font-size: var(--gm-font-size-2xl);
+  }
+
+  .gm-quote-form__form {
+    padding: var(--gm-spacing-md);
+  }
+
+  .gm-quote-form__input,
+  .gm-quote-form__select,
+  .gm-quote-form__textarea {
+    padding: var(--gm-spacing-sm);
+    font-size: var(--gm-font-size-sm);
+  }
+
+  .gm-quote-form__submit {
+    font-size: var(--gm-font-size-base);
+    padding: var(--gm-spacing-sm) var(--gm-spacing-md);
+  }
+}

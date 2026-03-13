@@ -1,0 +1,149 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "color": {
+      "custom": true,
+      "customGradient": true,
+      "palette": [
+        { "slug": "gm-black",         "color": "#000000",    "name": "Black" },
+        { "slug": "gm-bg-dark",       "color": "#0a0a0f",    "name": "Background Dark" },
+        { "slug": "gm-steam-dark",    "color": "#1b2838",    "name": "Steam Dark" },
+        { "slug": "gm-steam-deeper",  "color": "#171a21",    "name": "Steam Deeper" },
+        { "slug": "gm-dev-blue",      "color": "#7677ff",    "name": "Dev Blue" },
+        { "slug": "gm-dev-blue-light","color": "#a3e3ff",    "name": "Dev Blue Light" },
+        { "slug": "gm-primary",       "color": "#a855f7",    "name": "Primary Purple" },
+        { "slug": "gm-accent",        "color": "#6366f1",    "name": "Accent Indigo" },
+        { "slug": "gm-player-orange", "color": "#ff6b2b",    "name": "Player Orange" },
+        { "slug": "gm-steam-blue",    "color": "#66c0f4",    "name": "Steam Blue" },
+        { "slug": "gm-text-primary",  "color": "#ffffff",    "name": "Text Primary" },
+        { "slug": "gm-text-muted",    "color": "#8f98a0",    "name": "Text Muted" },
+        { "slug": "gm-text-dim",      "color": "#c7d5e0",    "name": "Text Dim" }
+      ],
+      "gradients": [
+        {
+          "slug": "gm-dev-gradient",
+          "gradient": "linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%)",
+          "name": "Dev Gradient"
+        },
+        {
+          "slug": "gm-player-gradient",
+          "gradient": "linear-gradient(135deg, #1b2838 0%, #2a475e 50%, #1b2838 100%)",
+          "name": "Player Gradient"
+        },
+        {
+          "slug": "gm-purple-gradient",
+          "gradient": "linear-gradient(135deg, #030712 0%, #1e1b4b 50%, #581c87 100%)",
+          "name": "Purple Gradient"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "'Inter', 'Segoe UI', system-ui, sans-serif",
+          "slug": "gm-sans",
+          "name": "Gamer Minds Sans"
+        },
+        {
+          "fontFamily": "'Space Grotesk', 'Inter', system-ui, sans-serif",
+          "slug": "gm-display",
+          "name": "Gamer Minds Display"
+        },
+        {
+          "fontFamily": "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+          "slug": "gm-mono",
+          "name": "Gamer Minds Mono"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "xs",   "size": "0.75rem",  "name": "Extra Small" },
+        { "slug": "sm",   "size": "0.875rem", "name": "Small" },
+        { "slug": "base", "size": "1rem",     "name": "Base" },
+        { "slug": "lg",   "size": "1.125rem", "name": "Large" },
+        { "slug": "xl",   "size": "1.25rem",  "name": "Extra Large" },
+        { "slug": "2xl",  "size": "1.5rem",   "name": "2X Large" },
+        { "slug": "3xl",  "size": "1.875rem", "name": "3X Large" },
+        { "slug": "4xl",  "size": "2.25rem",  "name": "4X Large" },
+        { "slug": "5xl",  "size": "3rem",     "name": "5X Large" },
+        { "slug": "6xl",  "size": "3.75rem",  "name": "6X Large" },
+        { "slug": "7xl",  "size": "4.5rem",   "name": "7X Large" }
+      ]
+    },
+    "spacing": {
+      "customSpacingSize": true,
+      "units": ["px", "%", "em", "rem", "vw", "vh"],
+      "spacingScale": {
+        "operator": "*",
+        "increment": 1.5,
+        "steps": 7,
+        "mediumStep": 1.5,
+        "unit": "rem"
+      }
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "layout": {
+      "contentSize": "1280px",
+      "wideSize": "1440px"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#000000",
+      "text": "#ffffff"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--gm-sans)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "0",
+      "padding": {
+        "top": "0",
+        "right": "0",
+        "bottom": "0",
+        "left": "0"
+      }
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--gm-display)",
+          "fontWeight": "700",
+          "lineHeight": "1.1"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--gm-display)",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--gm-display)",
+          "fontWeight": "600",
+          "lineHeight": "1.3"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    { "name": "front-page",        "title": "Front Page",        "postTypes": ["page"] },
+    { "name": "page-developers",   "title": "Developers Page",   "postTypes": ["page"] },
+    { "name": "page-players",      "title": "Players Page",      "postTypes": ["page"] },
+    { "name": "page-privacy",      "title": "Privacy Policy",    "postTypes": ["page"] },
+    { "name": "page-legal",        "title": "Legal / Terms",     "postTypes": ["page"] }
+  ]
+}

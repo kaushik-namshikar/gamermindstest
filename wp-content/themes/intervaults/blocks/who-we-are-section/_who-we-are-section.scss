@@ -1,0 +1,80 @@
+.who-we-are {
+    background-color: rgba(243, 241, 239, 0.6);
+    padding-top: clamp(60px, calc(40px + 6.25vw), 120px);
+
+    padding-bottom: clamp(70px, calc(47.3px + 7.08vw), 132px);
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        max-width: 833px;
+        width: 100%;
+    }
+
+    &__label {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-primary-400;
+        margin-bottom: 12px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        font-family: $secondary-font;
+    }
+
+    &__title {
+        font-family: 'Urbanist', sans-serif;
+        font-size: clamp(22px, calc(18.7px + 1.04vw), 32px);
+        line-height: 1.2;
+        letter-spacing: 0px;
+        font-weight: 400;
+        color: #b5b5b5;
+        margin-top: 0;
+        margin-bottom: 40px;
+
+        span {
+            transition: color 0.2s linear;
+        }
+
+    }
+
+
+
+    &__button {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        padding: 11.5px 24px;
+        background-color: $black;
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-family: $secondary-font;
+        height: 40px;
+
+        @media (max-width: 991.98px) {
+            height: auto;
+        }
+
+
+        &:hover {
+            background-color: #222;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.who-we-are-au {
+    padding-bottom: clamp(30px, calc(13.3px + 5.21vw), 80px);
+}
+
+.who-we-are-security {
+    padding-top: clamp(60px, calc(38.7px + 6.67vw), 124px);
+    padding-bottom: clamp(70px, calc(46.7px + 7.29vw), 100px);
+}

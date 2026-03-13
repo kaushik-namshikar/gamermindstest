@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/hero-section",
+  "title": "Hero Section",
+  "description": "Hero Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "hero-section.php"
+  },
+  "editorScript": "file:./hero-section.js",
+  "viewScript": "file:./hero-section.js"
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/quote-form",
+  "version": "1.0.0",
+  "title": "Quote Form",
+  "category": "gm",
+  "description": "Contact form for requesting quotes with project details.",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Get Your Free Quote"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Tell us about your project and we'll get back to you within 24 hours."
+    },
+    "formAction": {
+      "type": "string",
+      "default": ""
+    },
+    "submitText": {
+      "type": "string",
+      "default": "Request Quote"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "var(--gm-color-primary)"
+    }
+  },
+  "textdomain": "gamer-minds-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

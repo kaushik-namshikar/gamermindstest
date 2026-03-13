@@ -1,0 +1,25 @@
+{
+  "apiVersion": 2,
+  "name": "acf/contact-map-section",
+  "title": "Contact Map Section",
+  "description": "Contact section with embedded map below the title.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contact-map-section.php"
+  }
+}

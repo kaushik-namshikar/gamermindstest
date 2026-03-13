@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/contact-section",
+  "title": "Contact Section",
+  "description": "Certifications Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contact-section.php"
+  }
+}

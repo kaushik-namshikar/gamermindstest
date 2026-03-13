@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/process-timeline",
+  "title": "Process Timeline",
+  "description": "Horizontal or vertical timeline showing process steps.",
+  "category": "gm",
+  "icon": "list-view",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "Our Process"
+    },
+    "steps": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Scope",
+          "description": "Requirements & targets",
+          "icon": "🎯"
+        },
+        {
+          "title": "Prep",
+          "description": "Glossary + Style Guide",
+          "icon": "📚"
+        },
+        {
+          "title": "Translate",
+          "description": "Professional work",
+          "icon": "🌍"
+        },
+        {
+          "title": "LQA",
+          "description": "Quality assurance",
+          "icon": "✅"
+        },
+        {
+          "title": "Deliver",
+          "description": "Final files & support",
+          "icon": "🚀"
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

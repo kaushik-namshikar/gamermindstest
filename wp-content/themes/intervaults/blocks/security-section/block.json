@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/security-section",
+  "title": "Security Section",
+  "description": "Security Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "security-section.php"
+  },
+  "editorScript": "file:./security-section.js",
+  "viewScript": "file:./security-section.js"
+}

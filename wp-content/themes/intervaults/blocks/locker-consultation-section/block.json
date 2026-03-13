@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/locker-consultation-section",
+  "title": "Locker Consultation Section",
+  "description": "Locker Consultation Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "locker-consultation-section.php"
+  }
+}

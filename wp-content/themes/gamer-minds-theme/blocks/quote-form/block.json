@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/quote-form",
+  "title": "Developers — Quote Request Form",
+  "description": "AJAX quote form for studios to request localization quotes. Mirrors the Quote Form section of Developers.tsx.",
+  "category": "formatting",
+  "keywords": ["form", "quote", "contact"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

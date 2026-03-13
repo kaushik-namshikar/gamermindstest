@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/vault-features-section",
+  "title": "Vault features Section",
+  "description": "Vault features Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "vault-features-section.php"
+  },
+  "editorScript": "file:./vault-features-section.js",
+  "viewScript": "file:./vault-features-section.js"
+}

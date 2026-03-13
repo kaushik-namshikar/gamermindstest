@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/how-it-works-scrolltrigger-section",
+  "title": "How it works ScrollTrigger Section",
+  "description": "How it works section using GSAP ScrollTrigger for panel transitions.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "how-it-works-scrolltrigger-section.php"
+  },
+  "editorScript": "file:./how-it-works-scrolltrigger-section.js",
+  "viewScript": "file:./how-it-works-scrolltrigger-section.js"
+}

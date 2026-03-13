@@ -1,0 +1,68 @@
+.hero {
+
+
+    &__ticker {
+        position: relative;
+
+        width: 100%;
+        background: $color-primary-500;
+        overflow: hidden;
+
+        height: 56px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__ticker-track {
+        display: flex;
+        width: max-content;
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    &__ticker-group {
+        display: flex;
+        gap: 56px;
+        flex-shrink: 0;
+
+        &+& {
+            margin-left: 56px;
+        }
+    }
+
+    &__ticker-item {
+        color: rgba(243, 243, 243, 1);
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 510;
+        display: flex;
+        align-items: center;
+        gap: 56px;
+        font-weight: 500;
+        font-family: $secondary-font;
+        flex-shrink: 0;
+
+        img {
+            width: 22.39px;
+            height: auto;
+        }
+
+        /*&::after {
+            content: "";
+            color: rgba(255, 255, 255, 0.72);
+            width: 22.39px;
+            height: 24px;
+            background: url('<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/ticker-icon.png') no-repeat center;
+            background-size: contain;
+        }*/
+    }
+
+    @media (max-width: 768px) {
+
+        &__ticker-group {
+            gap: 40px;
+        }
+    }
+
+}

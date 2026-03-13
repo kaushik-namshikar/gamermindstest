@@ -1,0 +1,12 @@
+{
+  "apiVersion": 2,
+  "name": "gm/language-grid",
+  "title": "Language Grid",
+  "description": "Display supported languages as tag cloud",
+  "category": "formatting",
+  "attributes": {
+    "title": {"type": "string", "default": "Languages"},
+    "languages": {"type": "array", "default": []}
+  },
+  "supports": {"align": ["wide", "full"]}
+}

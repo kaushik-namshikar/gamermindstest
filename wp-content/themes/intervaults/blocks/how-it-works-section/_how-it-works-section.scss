@@ -1,0 +1,330 @@
+.how {
+    position: relative;
+    overflow: hidden; // prevents horizontal overflow during animation
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+/* WRAPPER */
+.how__wrapper {
+    display: flex;
+    height: 720px;
+
+    @media (max-height:719.98px) {
+        height: 90vh;
+    }
+
+    min-height: 0;
+}
+
+/* ============================= */
+/* LEFT INTRO PANEL */
+/* ============================= */
+
+.how__intro {
+    width: 35%;
+    flex: 0 0 35%;
+    background: $color-beige-400;
+    color: $white;
+    padding: clamp(20px, calc(-6.66px + 8.33vw), 100px) 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        color: $white;
+        font-family: 'Urbanist', sans-serif;
+        font-size: clamp(24px, calc(18.7px + 1.67vw), 40px);
+        line-height: 1.2;
+        letter-spacing: 0px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: $white;
+        font-weight: 400;
+        max-width: 400px;
+        line-height: 1.4;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        font-family: $secondary-font;
+    }
+}
+
+.how__btn {
+    align-self: flex-start;
+    padding: 11.5px 24px;
+    background: $white;
+    color: $black;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    transition: background 0.3s ease;
+    height: 40px;
+    font-family: $secondary-font;
+
+    @media (max-width: 991.98px) {
+        height: auto;
+    }
+
+
+    &:hover {
+        background: #f2f2f2;
+    }
+}
+
+/* ============================= */
+/* PANELS CONTAINER */
+/* ============================= */
+
+.how__panels {
+    display: flex;
+    width: calc(65% + var(--overlap-total));
+    flex: 0 0 auto;
+    flex-basis: calc(65% + var(--overlap-total));
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    align-items: stretch;
+    --peek-prev: clamp(40px, 9.5vw, 137px);
+    --peek-1: clamp(64px, 6.95vw, 100px);
+    --peek-2: clamp(48px, 6.95vw, 100px);
+    --prev-count: 0;
+    --next1-count: 0;
+    --next2-count: 0;
+    --overlap-step: clamp(10px, 5vw, 50px);
+    --overlap-total: calc(var(--prev-count) * var(--overlap-step));
+    --panel-transition-ms: 700ms;
+    --panel-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: translateX(calc(var(--overlap-total) * -1));
+    transition:
+        transform var(--panel-transition-ms) var(--panel-ease),
+        width var(--panel-transition-ms) var(--panel-ease),
+        flex-basis var(--panel-transition-ms) var(--panel-ease);
+    will-change: transform;
+    z-index: 2;
+}
+
+/* ============================= */
+/* INDIVIDUAL PANEL */
+/* ============================= */
+
+.how__panel {
+    position: relative;
+    width: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: width var(--panel-transition-ms) var(--panel-ease), opacity 0.28s ease;
+    will-change: width, opacity;
+
+    /* Background Image */
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Dark overlay */
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        z-index: 1;
+    }
+
+    /* Panel Content */
+    &-content {
+        position: absolute;
+        top: clamp(20px, calc(-13.33px + 10.42vw), 120px);
+
+        left: clamp(24px, calc(10.7px + 4.17vw), 64px);
+
+        z-index: 2;
+        max-width: 400px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.45s ease, transform 0.45s var(--panel-ease);
+        color: $white;
+
+        h3 {
+            font-family: 'Urbanist', sans-serif;
+            color: $black;
+            font-size: clamp(18px, calc(16px + 0.63vw), 24px);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            letter-spacing: 0px;
+        }
+
+        p {
+            font-size: clamp(16px, calc(15.3px + 0.21vw), 18px);
+            color: $color-gray-400;
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: 0px;
+            font-family: $secondary-font;
+        }
+    }
+
+    /* ACTIVE PANEL */
+    &.active {
+        width: calc(100% - (var(--prev-count) * var(--peek-prev)) - (var(--next1-count) * var(--peek-1)) - (var(--next2-count) * var(--peek-2)));
+        min-width: 0;
+        opacity: 1;
+        pointer-events: auto;
+
+        .how__panel-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &.prev {
+        width: var(--peek-prev);
+        opacity: 1;
+    }
+
+    &.next-1 {
+        width: var(--peek-1);
+        opacity: 1;
+    }
+
+    &.next-2 {
+        width: var(--peek-2);
+        opacity: 1;
+    }
+
+    &.prev,
+    &.next-1,
+    &.next-2 {
+        pointer-events: auto;
+    }
+
+    &.is-odd {
+        .how__panel-content {
+            h3 {
+                color: $black;
+            }
+
+            p {
+                color: $color-gray-400;
+            }
+        }
+    }
+
+    &.is-even {
+        .how__panel-content {
+            h3 {
+                color: $white;
+            }
+
+            p {
+                color: rgba(197, 197, 197, 1);
+            }
+        }
+    }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .how__panels {
+        --peek-prev: clamp(28px, 2.8vw, 44px);
+        --peek-1: clamp(48px, 4vw, 72px);
+        --peek-2: clamp(36px, 3vw, 56px);
+    }
+}
+
+@media (max-width:992.98px) {
+    .how__intro {
+        padding-top: 35px;
+    }
+
+    .how__panel-content {
+        top: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .how.how--capturing {
+        touch-action: none;
+    }
+
+    .how.how--mobile-gsap .how__wrapper {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    .how__wrapper {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 0;
+        height: clamp(420px, 88vh, 620px);
+    }
+
+    .how__intro {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        flex: 0 0 100%;
+        z-index: 1;
+        padding: 44px 18px 32px;
+    }
+
+    .how__panels {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        flex: 0 0 100%;
+        height: 100%;
+        z-index: 2;
+        --peek-prev: 0px;
+        --peek-1: 0px;
+        --peek-2: 0px;
+        --overlap-step: 0px;
+        --overlap-total: 0px;
+        transform: none;
+    }
+
+    .how__panel {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        opacity: 1;
+        pointer-events: none;
+        transition: none;
+        will-change: transform;
+
+        &-content {
+
+            left: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .how__panel {
+        &-content {
+            max-width: 300px;
+        }
+    }
+}

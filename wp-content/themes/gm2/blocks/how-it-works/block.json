@@ -1,0 +1,12 @@
+{
+  "apiVersion": 2,
+  "name": "gm/how-it-works",
+  "title": "How It Works",
+  "description": "3-step process flow",
+  "category": "formatting",
+  "attributes": {
+    "title": {"type": "string", "default": "How It Works"},
+    "steps": {"type": "array", "default": []}
+  },
+  "supports": {"align": ["wide", "full"]}
+}

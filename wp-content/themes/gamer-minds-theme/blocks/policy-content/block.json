@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "gm/policy-content",
+  "title": "Policy — Content Sections",
+  "description": "Scrollable legal content card. Mirrors the content in Privacy.tsx and Legal.tsx.",
+  "category": "formatting",
+  "keywords": ["policy", "privacy", "legal", "content"],
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "privacy"
+    }
+  },
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

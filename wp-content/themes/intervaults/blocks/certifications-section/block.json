@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/certifications-section",
+  "title": "Certifications Section",
+  "description": "Certifications Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "certifications-section.php"
+  }
+}

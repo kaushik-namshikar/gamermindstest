@@ -1,0 +1,6 @@
+{
+  "apiVersion": 2,
+  "name": "gm/trust-grid",
+  "title": "Trust Grid",
+  "description": "3-column grid for trust/value points"
+}

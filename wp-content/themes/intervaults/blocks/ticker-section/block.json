@@ -1,0 +1,18 @@
+{
+  "apiVersion": 2,
+  "name": "acf/ticker-section",
+  "title": "Ticker Section",
+  "description": "Ticker Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "ticker-section.php"
+  },
+  "viewScript": "file:./ticker-section.js"
+}

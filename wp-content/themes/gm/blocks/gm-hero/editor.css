@@ -1,0 +1,18 @@
+.gm-hero {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.gm-hero__inner {
+  gap: 1rem;
+}
+
+.gm-hero__card {
+  min-height: 220px;
+}
+
+.gm-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

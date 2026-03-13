@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/regions",
+  "title": "Players — Regions / Markets",
+  "description": "4-column market region cards. Mirrors the Regions section of Players.tsx.",
+  "category": "formatting",
+  "keywords": ["regions", "markets", "languages"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

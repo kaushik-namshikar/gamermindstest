@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/lets-talk-section",
+  "title": "Lets talk Section",
+  "description": "Lets talk Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "lets-talk-section.php"
+  }
+}

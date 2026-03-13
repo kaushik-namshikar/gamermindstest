@@ -1,0 +1,8 @@
+.gm-grid {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1.5rem;
+}
+
+.gm-grid__item {
+  min-height: 180px;
+}

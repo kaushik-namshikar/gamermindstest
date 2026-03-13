@@ -1,0 +1,114 @@
+.gm-language-grid {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(20, 20, 40, 0.3) 0%, rgba(30, 30, 60, 0.3) 100%);
+}
+
+.gm-language-grid__heading {
+  margin: 0 0 3rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gm-text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+.gm-language-grid__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gm-language-grid__item {
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(88, 80, 235, 0.1) 0%, rgba(59, 130, 246, 0.08) 100%);
+  border: 2px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gm-language-grid__item:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 60px rgba(168, 85, 247, 0.3), inset 0 0 40px rgba(168, 85, 247, 0.1);
+}
+
+.gm-language-grid__item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gm-language-grid__item:hover::before {
+  opacity: 1;
+}
+
+.gm-language-grid__flag {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.15));
+  border-radius: 0.75rem;
+}
+
+.gm-language-grid__name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(243, 244, 255, 0.95);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .gm-language-grid {
+    padding: 3rem 1rem;
+  }
+
+  .gm-language-grid__heading {
+    font-size: 1.875rem;
+  }
+
+  .gm-language-grid__grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .gm-language-grid__item {
+    padding: 1.5rem 1rem;
+  }
+
+  .gm-language-grid__flag {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .gm-language-grid__name {
+    font-size: 0.9rem;
+  }
+}

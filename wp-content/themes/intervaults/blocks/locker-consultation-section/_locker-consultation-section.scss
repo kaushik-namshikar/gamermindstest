@@ -1,0 +1,391 @@
+.locker-consultation-section {
+    background-color: $color-beige-400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: clamp(20px, 6.25vw, 90px);
+
+    @media (max-width: 1350px) {
+        padding-top: clamp(56px, 7vw, 100px);
+        padding-bottom: clamp(56px, 7vw, 100px);
+    }
+
+    @media (max-width: 991.98px) {
+        padding-right: clamp(20px, 6.25vw, 90px);
+    }
+
+    @media (min-width:1441px) {
+
+        padding-right: clamp(20px, 6.25vw, 90px);
+    }
+
+
+    position: relative;
+
+    z-index: 3;
+
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+
+        @media (min-width: 1441px) {
+            position: relative;
+        }
+    }
+
+    &__content {
+        max-width: 620px;
+    }
+
+    &__title {
+        margin: 0;
+        color: $white;
+        font-family: 'Urbanist', sans-serif;
+        font-size: clamp(34px, 4vw, 40px);
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0px;
+    }
+
+    &__description {
+        margin: 12px 0 0;
+        max-width: 460px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        font-family: $secondary-font;
+    }
+
+    &__highlights {
+        margin: 16px 0 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__highlight-item {
+        color: #f2f1eb;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        padding: 7px 10px;
+        font-family: 'Urbanist', sans-serif;
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    &__form {
+        margin-top: clamp(24px, 3vw, 40px);
+
+        .frm_hidden_container .frm_primary_label {
+            visibility: visible;
+        }
+
+        .frm_style_formidable-style.with_frm_style div.frm_description {
+            display: none;
+        }
+
+
+
+        .frm_form_fields {
+            display: grid;
+            gap: 14px;
+        }
+
+        .with_frm_style .frm_form_field,
+        .frm_style_formidable-style.with_frm_style .form-field {
+            margin: 0;
+        }
+
+        .with_frm_style .frm_top_container .frm_primary_label,
+        .with_frm_style .frm_hidden_container .frm_primary_label {
+
+            color: $white;
+
+            font-size: 14px;
+            font-weight: 510;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            font-family: $secondary-font;
+        }
+
+        .with_frm_style input[type="text"],
+        .with_frm_style input[type="email"],
+        .with_frm_style input[type="tel"],
+        .with_frm_style input[type="number"],
+        .with_frm_style input[type="date"],
+        .with_frm_style input[type="time"],
+        .with_frm_style select,
+        .with_frm_style textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.14);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 6px;
+            min-height: 41px;
+            padding: 11px 14px;
+            color: $search-box-ph;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 14px;
+            line-height: 1.2;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .with_frm_style input::placeholder,
+        .with_frm_style textarea::placeholder {
+            color: $search-box-ph;
+
+            opacity: 1;
+        }
+
+        .with_frm_style input[type="time"] {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .with_frm_style input[type="time"]::-webkit-datetime-edit {
+            padding: 0;
+        }
+
+        .with_frm_style input[type="time"]::-webkit-datetime-edit-hour-field,
+        .with_frm_style input[type="time"]::-webkit-datetime-edit-minute-field,
+        .with_frm_style input[type="time"]::-webkit-datetime-edit-ampm-field {
+            min-width: 1.8em;
+            text-align: center;
+        }
+
+        .with_frm_style input[type="time"]::-webkit-datetime-edit-text {
+            padding: 0 0.25em;
+        }
+
+        .with_frm_style .js-locker-time input,
+        .with_frm_style .js-locker-date input {
+            padding-right: 40px;
+            color: rgba(255, 255, 255, 0.82);
+            cursor: pointer;
+        }
+
+        .with_frm_style .js-locker-time input::placeholder,
+        .with_frm_style .js-locker-date input::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .with_frm_style .js-locker-time input {
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 7px 4px;
+        }
+
+        .with_frm_style .js-locker-date input {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2.667 3.333h10.666a.667.667 0 0 1 .667.667v9.333a.667.667 0 0 1-.667.667H2.667A.667.667 0 0 1 2 13.333V4a.667.667 0 0 1 .667-.667Z' stroke='%23E7E7E0' stroke-opacity='0.85'/%3E%3Cpath d='M5.333 2v2.667M10.667 2v2.667M2 6.667h12' stroke='%23E7E7E0' stroke-opacity='0.85' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px 16px;
+        }
+
+        .with_frm_style .js-locker-date input[type="date"]::-webkit-calendar-picker-indicator,
+        .with_frm_style .js-locker-time input[type="time"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .with_frm_style input:focus,
+        .with_frm_style select:focus,
+        .with_frm_style textarea:focus {
+            box-shadow: none !important;
+            border-color: $white !important;
+            background: rgba(255, 255, 255, 0.25);
+            outline: none;
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+
+
+        .frm_style_formidable-style.with_frm_style .frm_submit button,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit'] {
+            background: $white;
+            color: $black;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+
+            font-family: 'Urbanist', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.2;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit button:hover,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit']:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit button:active,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit']:active,
+        .frm_style_formidable-style.with_frm_style .frm_submit .frm_button_submit:active,
+        .frm_style_formidable-style.with_frm_style .frm_submit button:focus,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit']:focus,
+        .frm_style_formidable-style.with_frm_style .frm_submit .frm_button_submit:focus,
+        .frm_style_formidable-style.with_frm_style .frm_submit button.frm_ajax_loading,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit'].frm_ajax_loading,
+        .frm_style_formidable-style.with_frm_style .frm_submit .frm_button_submit.frm_ajax_loading,
+        .frm_style_formidable-style.with_frm_style .frm_submit button.frm_loading,
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit'].frm_loading,
+        .frm_style_formidable-style.with_frm_style .frm_submit .frm_button_submit.frm_loading {
+            background: rgba(215, 215, 215, 0.72) !important;
+            background-color: rgba(215, 215, 215, 0.72) !important;
+            border-color: rgba(215, 215, 215, 0.72) !important;
+            color: $black !important;
+            transform: translateY(0);
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit.frm_ajax_loading button,
+        .frm_style_formidable-style.with_frm_style .frm_submit.frm_ajax_loading input[type='submit'],
+        .frm_style_formidable-style.with_frm_style .frm_submit.frm_ajax_loading .frm_button_submit,
+        .frm_style_formidable-style.with_frm_style .frm_submit button[disabled],
+        .frm_style_formidable-style.with_frm_style .frm_submit input[type='submit'][disabled],
+        .frm_style_formidable-style.with_frm_style .frm_submit .frm_button_submit[disabled] {
+            background: rgba(215, 215, 215, 0.72) !important;
+            background-color: rgba(215, 215, 215, 0.72) !important;
+            background-image: none !important;
+            border-color: rgba(215, 215, 215, 0.72) !important;
+            box-shadow: none !important;
+            color: transparent !important;
+            text-shadow: none !important;
+            opacity: 1 !important;
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit button {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 11.5px 24px;
+            color: $black;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            font-family: $secondary-font;
+            height: 40px;
+
+        }
+
+        .with_frm_style input {
+            margin-bottom: 20px;
+            padding: 12px 12px;
+            background-color: $search-box-color;
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+
+            /* Background blur */
+            backdrop-filter: blur(5px);
+            border: 1px solid $search-box-color;
+            font-family: $secondary-font;
+        }
+
+        .with_frm_style .frm_form_field.frm_blank_field input,
+        .with_frm_style .frm_form_field.frm_blank_field textarea,
+        .with_frm_style .frm_form_field.frm_blank_field select,
+        .with_frm_style .frm_form_field:has(.frm_error) input,
+        .with_frm_style .frm_form_field:has(.frm_error) textarea,
+        .with_frm_style .frm_form_field:has(.frm_error) select {
+            margin-bottom: 5px;
+        }
+
+        .with_frm_style .frm_error {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__media {
+        margin: 0;
+
+
+        .locker-effect {
+
+            position: absolute;
+
+            top: 0;
+            right: 5%;
+
+            width: 546.5px;
+            height: 430px;
+
+            object-fit: contain;
+            pointer-events: none;
+
+            @media (min-width: 1441px) {
+                top: -10px;
+            }
+
+            @media (max-width:480px) {
+                width: 346.5px;
+                height: 230px;
+            }
+        }
+    }
+
+    &__media>.locker-consultation-section__image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    @media (max-width: 991.98px) {
+        &__content {
+            max-width: 100%;
+            order: 2;
+        }
+
+        &__media {
+            order: 1;
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__form {
+
+
+            .frm_form_field.frm_full,
+            .frm_form_field.full-width,
+            .frm_submit {
+                grid-column: 1 / -1;
+            }
+        }
+
+
+    }
+
+    @media (min-width: 992px) {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__media {
+            justify-self: end;
+        }
+
+        &__image {
+            margin: 0;
+        }
+    }
+
+    @media (min-width:1280px) {
+        &__container {
+            grid-template-columns: 510px auto;
+        }
+    }
+}

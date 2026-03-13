@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/languages",
+  "title": "Developers — Language Grid",
+  "description": "Tag cloud of supported languages. Mirrors the Languages section of Developers.tsx.",
+  "category": "formatting",
+  "keywords": ["languages", "localization", "tags"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

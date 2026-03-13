@@ -1,0 +1,6 @@
+{
+  "apiVersion": 2,
+  "name": "gm/regions-grid",
+  "title": "Regions Grid",
+  "description": "4-column grid of target regions"
+}

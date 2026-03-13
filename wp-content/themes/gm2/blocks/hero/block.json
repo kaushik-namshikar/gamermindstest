@@ -1,0 +1,64 @@
+{
+  "apiVersion": 2,
+  "name": "gm/hero",
+  "title": "Hero Section",
+  "description": "Hero section with title, subtitle, buttons, and background options",
+  "category": "formatting",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "Powerful Game Localization"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Translation, editing, and LQA for studios shipping globally"
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "button1Text": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "button1Url": {
+      "type": "string",
+      "default": "#"
+    },
+    "button2Text": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "button2Url": {
+      "type": "string",
+      "default": "#"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "dark-blue"
+    },
+    "gradientOverlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "html": false
+  },
+  "render": "file:./render.php",
+  "textdomain": "gamer-minds-theme"
+}

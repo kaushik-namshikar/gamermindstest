@@ -1,0 +1,18 @@
+/*
+Theme Name: Gamer Minds Theme
+Theme URI: https://example.com/gamer-minds-theme
+Author: Gamer Minds
+Author URI: https://example.com
+Description: A custom Gutenberg block theme for Gamer Minds, built from a React/Figma design.
+Version: 1.0.0
+Requires at least: 6.2
+Tested up to: 6.5
+Requires PHP: 7.4
+Text Domain: gamer-minds-theme
+Tags: one-column, custom-menu, flexible-header, full-site-editing, editor-style
+*/
+
+/*
+ * This file is intentionally minimal. All core styles are loaded via
+ * assets/css/style.css using wp_enqueue_style in functions.php.
+ */

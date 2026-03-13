@@ -1,0 +1,6 @@
+{
+  "apiVersion": 2,
+  "name": "gm/split-cards",
+  "title": "Split Cards",
+  "description": "Two cards side-by-side with different colors"
+}

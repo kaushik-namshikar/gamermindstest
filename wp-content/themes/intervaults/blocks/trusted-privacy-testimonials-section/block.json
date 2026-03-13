@@ -1,0 +1,24 @@
+{
+  "apiVersion": 2,
+  "name": "acf/trusted-privacy-testimonials-section",
+  "title": "Trusted Privacy Testimonials Section",
+  "description": "Testimonial cards slider for privacy-focused trust messaging.",
+  "category": "formatting",
+  "supports": {
+    "align": ["wide", "full"],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "editorScript": "file:./script.js",
+  "viewScript": "file:./script.js"
+}

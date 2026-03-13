@@ -1,0 +1,157 @@
+{
+    "key": "group_9f1a6b2c8d3e",
+    "title": "Trusted Privacy Testimonials Section",
+    "fields": [
+        {
+            "key": "field_a17c9d4e",
+            "label": "Section Label",
+            "name": "trusted_privacy_testimonials_section_section_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional short label above heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_b28d0e5f",
+            "label": "Heading",
+            "name": "trusted_privacy_testimonials_section_heading",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Main section headline.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_c39e1f6a",
+            "label": "Testimonials",
+            "name": "trusted_privacy_testimonials_section_testimonials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add testimonial cards.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "field_d40f2a7b",
+            "button_label": "Add Testimonial",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_d40f2a7b",
+                    "label": "Quote",
+                    "name": "trusted_privacy_testimonials_section_quote",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Testimonial quote text.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 5,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_c39e1f6a"
+                },
+                {
+                    "key": "field_e51a3b8c",
+                    "label": "Client Name",
+                    "name": "trusted_privacy_testimonials_section_client_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Name or profile label.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c39e1f6a"
+                },
+                {
+                    "key": "field_f62b4c9d",
+                    "label": "Client Meta",
+                    "name": "trusted_privacy_testimonials_section_client_meta",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Secondary line below client name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_c39e1f6a"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/trusted-privacy-testimonials-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1772064000
+}

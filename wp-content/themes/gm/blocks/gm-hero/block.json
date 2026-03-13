@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/hero",
+  "title": "Hero (Split Paths)",
+  "description": "Full-screen hero with two paths (Developer / Player) and animated backgrounds.",
+  "category": "gm",
+  "icon": "star-filled",
+  "supports": {
+    "html": false,
+    "align": ["full", "wide"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h1",
+      "default": "GAMER MINDS"
+    },
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p.gm-hero__subtitle",
+      "default": "Choose your path"
+    },
+    "leftTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--left h2",
+      "default": "DEVELOPER"
+    },
+    "leftSubtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--left .gm-hero__subtitle",
+      "default": "Professional Localization"
+    },
+    "leftLabel": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--left .gm-hero__label",
+      "default": "ENTER"
+    },
+    "leftUrl": {
+      "type": "string",
+      "default": "#developers"
+    },
+    "rightTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--right h2",
+      "default": "PLAYER"
+    },
+    "rightSubtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--right .gm-hero__subtitle",
+      "default": "Voice & Community"
+    },
+    "rightLabel": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-hero__card--right .gm-hero__label",
+      "default": "ENTER"
+    },
+    "rightUrl": {
+      "type": "string",
+      "default": "#players"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

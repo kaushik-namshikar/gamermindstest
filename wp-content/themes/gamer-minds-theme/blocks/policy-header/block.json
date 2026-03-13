@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "gm/policy-header",
+  "title": "Policy — Page Header",
+  "description": "Header for Privacy and Legal pages with icon, title and date. Mirrors the header in Privacy.tsx and Legal.tsx.",
+  "category": "formatting",
+  "keywords": ["policy", "privacy", "legal", "header"],
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "privacy"
+    }
+  },
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/locker-consultation-form-6-section",
+  "title": "Locker Consultation Section (Form 6)",
+  "description": "Locker Consultation Section with Formidable Form ID 6",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "locker-consultation-form-6-section.php"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/process-timeline",
+  "title": "Developers — Process Timeline",
+  "description": "5-step horizontal process flow. Mirrors the Process section of Developers.tsx.",
+  "category": "formatting",
+  "keywords": ["process", "timeline", "steps"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "acf/biometric-lockers-reverse-section",
+  "title": "Biometric Lockers Reverse Section",
+  "description": "Biometric lockers cards with right-side heading and left-side cards.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "biometric-lockers-reverse-section.php"
+  },
+  "editorScript": "file:./biometric-lockers-reverse-section.js",
+  "viewScript": "file:./biometric-lockers-reverse-section.js"
+}

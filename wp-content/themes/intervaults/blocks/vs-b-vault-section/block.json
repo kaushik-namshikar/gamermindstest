@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/vs-b-vault-section",
+  "title": "VS Biometric Vault Section",
+  "description": "VS Biometric Vault Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "vs-b-vault-section.php"
+  },
+  "editorScript": "file:./vs-b-vault-section.js",
+  "viewScript": "file:./vs-b-vault-section.js"
+}

@@ -1,0 +1,18 @@
+{
+  "apiVersion": 2,
+  "name": "gm/content-sections",
+  "title": "Content Sections",
+  "description": "Text content sections with headings and paragraphs (for privacy policy, legal, etc.)",
+  "category": "formatting",
+  "attributes": {
+    "sections": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "align": ["wide"],
+    "anchor": true,
+    "html": true
+  }
+}

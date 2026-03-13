@@ -1,0 +1,257 @@
+/** {
+    border: 1px solid red;
+}*/
+
+.side-padding {
+
+
+    padding-left: clamp(20px, 6.25vw, 90px);
+    padding-right: clamp(20px, 6.25vw, 90px);
+
+
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+
+    &.is-scrolled {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @media (min-width: 1441px) {
+        .navbar {
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+    }
+}
+
+
+.iv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    margin: 0 auto;
+
+    max-width: 1440px;
+
+    @media (max-width: 480px) {
+        padding-top: 14px;
+    }
+
+
+
+    .header-logo img {
+        width: 182px;
+        height: 36px;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .header-nav-items {
+        max-height: 40px;
+        gap: 40px;
+        align-items: center;
+        font-size: 14px;
+        line-height: 16.8px;
+        letter-spacing: -0.16px;
+
+
+        ul {
+            margin-bottom: 0 !important;
+            padding-left: 0;
+            font-family: $secondary-font;
+
+            li {
+                a {
+                    color: white !important;
+                    text-decoration: none;
+                }
+
+                &.current-menu-item a,
+                &.current-menu-parent a,
+                &.current-menu-ancestor a,
+                &.current_page_item a,
+                &.current_page_parent a,
+                &.current_page_ancestor a {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+
+
+    .header-nav-button {
+        padding: 11.5px 24px;
+        background-color: white;
+        border-radius: 4px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        font-family: $secondary-font;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+
+}
+
+//offcanvas
+// Existing styles remain, add/modify these:
+
+.menu-toggle {
+    display: none; // Hidden on desktop
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: 991px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%; // Hidden off-screen
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8); // Dark background for offcanvas
+        padding: 80px 40px;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+
+        &.is-open {
+            right: 0; // Slide in
+        }
+    }
+
+    .header-nav-items {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 30px !important;
+        max-height: none !important;
+
+        .main-nav {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
+    // Animate hamburger to 'X' when open
+    .menu-toggle.active {
+        .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+
+//page-specific 
+.page-id-304,
+.page-id-289 {
+    .site-header.is-scrolled {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .iv-header {
+
+
+        .header-nav-items {
+            ul {
+                li {
+                    a {
+                        color: #3C3939 !important;
+                    }
+                }
+            }
+        }
+
+        .menu-toggle .bar {
+            background-color: $black;
+        }
+    }
+}
+
+.page-id-304,
+.page-id-289 {
+    .site-header.is-scrolled {
+        .header-nav-items {
+            ul {
+                li {
+                    a {
+                        color: #3C3939 !important;
+                    }
+                }
+            }
+        }
+
+        .menu-toggle .bar {
+            background-color: $black;
+        }
+    }
+
+    .iv-header {
+        .header-nav-button {
+            background-color: black;
+
+            a {
+                color: white;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .header-nav-container {
+                background-color: $white;
+            }
+        }
+
+
+    }
+}

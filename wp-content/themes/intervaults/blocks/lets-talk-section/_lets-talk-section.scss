@@ -1,0 +1,306 @@
+.consultation {
+    position: relative;
+    background-color: #0f172d;
+    overflow: hidden;
+
+    padding-top: clamp(80px, 10vw, 103.5px);
+    padding-bottom: clamp(80px, 10vw, 103.5px);
+
+    display: flex;
+    align-items: center;
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &__bg-image {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg,
+                rgba(15, 23, 45, 0.75) 0%,
+                rgba(15, 23, 45, 0.55) 40%,
+                rgba(15, 23, 45, 0.15) 70%,
+                rgba(15, 23, 45, 0) 100%);
+
+
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1440px;
+
+
+    }
+
+    &__content {
+        max-width: 510px;
+        color: $white;
+    }
+
+    &__title {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
+        font-size: clamp(32px, 4vw, 40px);
+        line-height: 1.2;
+        margin-bottom: 40px;
+        letter-spacing: 0px;
+        color: $color-gray-200;
+    }
+
+    &__title2 {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
+        font-size: clamp(32px, calc(18.7px + 2.92vw), 56px);
+        line-height: 1.1;
+        margin-bottom: 40px;
+        letter-spacing: 0px;
+        color: $white;
+    }
+
+    /* ======================= */
+    /* FORM WRAPPER STYLING */
+    /* ======================= */
+
+    &__form {
+
+
+        .frm_form_fields {
+            display: grid;
+
+            gap: 20px;
+        }
+
+        .frm_hidden_container .frm_primary_label {
+            visibility: visible;
+        }
+
+        .frm_style_formidable-style.with_frm_style div.frm_description {
+            display: none;
+        }
+
+        .with_frm_style .frm_top_container .frm_primary_label {
+            font-weight: 510;
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: $color-gray-200;
+            padding-bottom: 5px;
+            font-family: $secondary-font;
+        }
+
+        .with_frm_style .frm_hidden_container .frm_primary_label {
+            font-weight: 510;
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: $color-gray-200;
+            padding-bottom: 4px;
+            font-family: $secondary-font;
+        }
+
+        .with_frm_style input {
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(5px);
+            border: 1px solid $search-box-color;
+            background: $search-box-color;
+            margin-bottom: 19px;
+            padding: 12px;
+            font-family: $secondary-font;
+            border-radius: 4px;
+            color: rgba(215, 215, 215, 0.72);
+        }
+
+        .with_frm_style .frm_form_field.frm_blank_field input,
+        .with_frm_style .frm_form_field.frm_blank_field textarea,
+        .with_frm_style .frm_form_field.frm_blank_field select,
+        .with_frm_style .frm_form_field:has(.frm_error) input,
+        .with_frm_style .frm_form_field:has(.frm_error) textarea,
+        .with_frm_style .frm_form_field:has(.frm_error) select {
+            margin-bottom: 5px;
+        }
+
+        .with_frm_style .frm_error {
+            margin-bottom: 10px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: $search-box-ph;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            font-size: 14px;
+            opacity: 1; // important for Firefox
+        }
+
+        .frm_style_formidable-style.with_frm_style .frm_submit button {
+            background: $white;
+            padding: 11.5px 24px;
+            color: $black;
+            border-radius: 4px;
+            border: none;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .frm_style_formidable-style.with_frm_style .form-field {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+
+        .frm_form_field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(239, 239, 242, 0.16);
+            backdrop-filter: blur(10px);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: rgba(215, 215, 215, 0.72);
+            outline: none;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+
+            &:focus {
+                box-shadow: 0px 0px 5px 0px $black !important;
+                border-color: $black !important;
+                background: rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+            grid-column: 1 / -1;
+        }
+
+        .with_frm_style .frm_form_fields>fieldset {
+            padding-bottom: 0;
+        }
+
+
+
+        .frm_submit {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+            font-family: $secondary-font;
+            position: relative;
+
+            button,
+            input[type="submit"] {
+                background: $white;
+                color: $black;
+                border: none;
+                padding: 12px 28px;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #f2f2f2;
+                    transform: translateY(-2px);
+                }
+
+                &:active {
+                    background: rgba(215, 215, 215, 0.72);
+                    transform: translateY(0);
+                }
+            }
+
+            button.frm_loading,
+            input[type="submit"].frm_loading,
+            button.frm_ajax_loading,
+            input[type="submit"].frm_ajax_loading,
+            .frm_button_submit.frm_ajax_loading,
+            .frm_button_submit.frm_loading,
+            button:disabled,
+            input[type="submit"]:disabled {
+                background: rgba(215, 215, 215, 0.72);
+                background-color: rgba(215, 215, 215, 0.72) !important;
+                border-color: rgba(215, 215, 215, 0.72) !important;
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
+
+
+
+        /* Labels */
+        label {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 13px;
+            margin-bottom: 6px;
+            display: block;
+        }
+    }
+
+    /* ======================= */
+    /* RESPONSIVE */
+    /* ======================= */
+
+    @media (max-width: 991.98px) {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &__content {
+            max-width: 100%;
+        }
+
+        &__form {
+            .frm_form_fields {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+
+}
+
+.consultation-contact {
+    padding-top: clamp(70px, calc(42.5px + 8.59vw), 152.5px);
+    padding-bottom: clamp(80px, 10vw, 100.5px);
+}
+
+.frm_style_formidable-style.with_frm_style .frm_error_style {
+    border-color: purple !important;
+
+    color: purple !important;
+}
+
+.page-id-243,
+.page-id-304 {
+    .frm_style_formidable-style.with_frm_style .frm_error_style {
+        border-color: grey !important;
+
+        color: grey !important;
+    }
+}

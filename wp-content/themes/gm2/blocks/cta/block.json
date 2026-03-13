@@ -1,0 +1,33 @@
+{
+  "apiVersion": 2,
+  "name": "gm/cta",
+  "title": "Call-to-Action",
+  "description": "Call-to-action section with text and button",
+  "category": "formatting",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Ready to get started?"
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "purple"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"]
+  },
+  "render": "file:./render.php"
+}

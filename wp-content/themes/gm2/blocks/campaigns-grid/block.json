@@ -1,0 +1,7 @@
+{
+  "apiVersion": 2,
+  "name": "gm/campaigns-grid",
+  "title": "Campaigns Grid",
+  "description": "Display voting campaigns for players",
+  "category": "formatting"
+}

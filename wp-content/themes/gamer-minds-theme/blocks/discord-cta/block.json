@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/discord-cta",
+  "title": "Players — Discord CTA",
+  "description": "Community join CTA section. Mirrors the CTA section of Players.tsx.",
+  "category": "formatting",
+  "keywords": ["cta", "discord", "community"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}

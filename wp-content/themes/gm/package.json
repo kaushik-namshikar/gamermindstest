@@ -1,0 +1,17 @@
+{
+  "name": "gamer-minds-theme",
+  "version": "1.0.0",
+  "description": "Custom Gutenberg block theme for Gamer Minds",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.0.0"
+  },
+  "author": "Gamer Minds",
+  "license": "GPL-2.0-or-later"
+}

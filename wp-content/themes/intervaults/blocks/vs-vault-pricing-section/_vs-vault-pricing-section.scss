@@ -1,0 +1,140 @@
+.vault-pricing {
+    background: $color-gray-850;
+
+    color: $white;
+    padding-top: clamp(60px, 6vw, 80px);
+    padding-bottom: clamp(60px, 6vw, 80px);
+    position: relative;
+    z-index: 3;
+
+    @media (min-width:1280px) {
+        padding-right: 95px;
+    }
+
+    &__container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 292px auto;
+        /*gap: clamp(40px, 6vw, 120px);*/
+        gap: clamp(32px, calc(5.33px + 8.33vw), 112px);
+
+        align-items: center;
+
+        @media (max-width:1279.98px) {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @media (max-width: 991.98px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+
+    /* LEFT SIDE */
+    &__title {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
+        font-size: clamp(28px, 3.5vw, 40px);
+        line-height: 1.2;
+        letter-spacing: 0px;
+        margin: 0;
+        max-width: 320px;
+        color: $color-gray-200;
+
+        @media (max-width: 991.98px) {
+            max-width: 100%;
+        }
+    }
+
+    /* RIGHT SIDE */
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 16px;
+        align-self: flex-end;
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 16px;
+        border-left: 1px solid rgba(235, 226, 215, 0.1);
+        max-width: 188px;
+        margin-bottom: 11px;
+
+        &:first-child {
+            border: none;
+            padding-left: 0;
+        }
+
+
+        /* vertical separator */
+        /*&:not(:first-child)::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.15);
+        }*/
+
+        @media (max-width: 991.98px) {
+            padding-left: 0;
+            border: none;
+
+            /* &:not(:first-child)::before {
+                display: none;
+            }*/
+        }
+    }
+
+    &__duration {
+        font-family: 'Urbanist', sans-serif;
+        font-size: clamp(22px, 2.3vw, 32px);
+        font-weight: 400;
+        color: $color-primary-100;
+        line-height: 1.2;
+        letter-spacing: 0;
+        margin: 0 0 8px;
+    }
+
+    &__label {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0;
+        font-size: 20px;
+        margin: 0 0 4px;
+        color: $color-gray-200;
+
+        @media (max-width:991.98px) {
+            font-size: 18px;
+        }
+
+        @media (max-width:767.98px) {
+            font-size: 16px;
+        }
+    }
+
+    &__subtext {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: $color-gray-300;
+        margin: 0;
+
+
+        @media (max-width:767.98px) {
+            font-size: 14px;
+        }
+    }
+
+
+}

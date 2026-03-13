@@ -1,0 +1,148 @@
+{
+    "key": "group_faq_locker_video_section",
+    "title": "FAQ Locker Video Section Block",
+    "fields": [
+        {
+            "key": "field_a101b202",
+            "label": "Title",
+            "name": "faq_locker_video_section_title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Main headline on the left side.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_c303d404",
+            "label": "Description",
+            "name": "faq_locker_video_section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Short supporting paragraph below title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_e505f606",
+            "label": "Search Placeholder",
+            "name": "faq_locker_video_section_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Placeholder text for the search input.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_g707h808",
+            "label": "Locker Video",
+            "name": "faq_locker_video_section_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload MP4/WebM locker video.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4,webm,mov",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_i909j010",
+            "label": "Background Color",
+            "name": "faq_locker_video_section_background_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_k111l212",
+            "label": "Text Color",
+            "name": "faq_locker_video_section_text_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/faq-locker-video-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1772067000
+}

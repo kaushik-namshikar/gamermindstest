@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/amenity-section",
+  "title": "Amenity Section",
+  "description": "Amenity Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "amenity-section.php"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "acf/biometric-lockers-section",
+  "title": "Biometric Lockers Section",
+  "description": "Biometric lockers cards with arrow-based content rotation.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "biometric-lockers-section.php"
+  },
+  "editorScript": "file:./biometric-lockers-section.js",
+  "viewScript": "file:./biometric-lockers-section.js"
+}

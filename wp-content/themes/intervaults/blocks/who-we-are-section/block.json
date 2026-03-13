@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "acf/who-we-are-section",
+  "title": "Who We Are Section",
+  "description": "Who we are Section",
+  "category": "formatting",
+  "supports": {
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    },
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "who-we-are-section.php"
+  },
+  "editorScript": "file:./who-we-are-section.js",
+  "viewScript": "file:./who-we-are-section.js"
+}

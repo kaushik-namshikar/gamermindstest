@@ -1,0 +1,67 @@
+.gm-process-timeline {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.gm-process-timeline__heading {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.gm-process-timeline__container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gm-process-timeline__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 140px;
+}
+
+.gm-process-timeline__step-number {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--gm-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.gm-process-timeline__step-content {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 120px;
+  width: 100%;
+}
+
+.gm-process-timeline__connector {
+  position: absolute;
+  top: 1rem;
+  left: calc(100% + 0.5rem);
+  width: calc(100% - 2rem);
+  height: 2px;
+  background: rgba(79, 70, 229, 0.6);
+}
+
+@media (max-width: 768px) {
+  .gm-process-timeline__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gm-process-timeline__connector {
+    display: none;
+  }
+}

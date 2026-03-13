@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/faq-cta-hero-section",
+  "title": "FAQ CTA Section",
+  "description": "CTA FAQ Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "faq-cta-section.php"
+  }
+}

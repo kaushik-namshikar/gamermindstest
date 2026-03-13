@@ -1,0 +1,7 @@
+{
+  "apiVersion": 2,
+  "name": "gm/quote-form",
+  "title": "Quote Request Form",
+  "description": "Form for requesting localization quotes",
+  "category": "formatting"
+}

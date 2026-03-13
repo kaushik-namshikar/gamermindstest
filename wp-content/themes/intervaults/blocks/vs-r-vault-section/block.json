@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/vs-r-vault-section",
+  "title": "VS Robotic Vault Section",
+  "description": "VS Robotic Vault Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "vs-vault-section.php"
+  },
+  "editorScript": "file:./vs-vault-section.js",
+  "viewScript": "file:./vs-vault-section.js"
+}

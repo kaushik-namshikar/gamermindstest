@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/language-grid",
+  "title": "Languages Grid",
+  "description": "Grid displaying supported languages with flags or icons.",
+  "category": "gm",
+  "icon": "translation",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "Supported Languages"
+    },
+    "languages": {
+      "type": "array",
+      "default": [
+        "Chinese (Simplified)",
+        "Chinese (Traditional)",
+        "French",
+        "German",
+        "Italian",
+        "Japanese",
+        "Korean",
+        "Polish",
+        "Portuguese (Brazil)",
+        "Spanish (Spain)",
+        "Spanish (LATAM)",
+        "Turkish"
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

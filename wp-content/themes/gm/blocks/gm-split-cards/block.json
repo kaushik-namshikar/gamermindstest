@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/split-cards",
+  "title": "Split Landing Cards",
+  "description": "Two-column layout with cards for different sections.",
+  "category": "gm",
+  "icon": "columns",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "leftTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__left h2",
+      "default": "For Developers"
+    },
+    "leftDescription": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__left .gm-split-cards__description",
+      "default": "Professional localization services for game developers."
+    },
+    "leftButtonText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__left .gm-btn",
+      "default": "Learn More"
+    },
+    "leftButtonUrl": {
+      "type": "string",
+      "default": "#developers"
+    },
+    "rightTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__right h2",
+      "default": "For Players"
+    },
+    "rightDescription": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__right .gm-split-cards__description",
+      "default": "Community and localization for gamers worldwide."
+    },
+    "rightButtonText": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gm-split-cards__right .gm-btn",
+      "default": "Join Community"
+    },
+    "rightButtonUrl": {
+      "type": "string",
+      "default": "#players"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

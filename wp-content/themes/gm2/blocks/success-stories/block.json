@@ -1,0 +1,7 @@
+{
+  "apiVersion": 2,
+  "name": "gm/success-stories",
+  "title": "Success Stories",
+  "description": "Display successful localization stories",
+  "category": "formatting"
+}

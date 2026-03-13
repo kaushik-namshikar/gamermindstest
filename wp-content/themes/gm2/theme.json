@@ -1,0 +1,247 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.0/theme.json",
+  "version": 2,
+  "settings": {
+    "border": {
+      "radius": true
+    },
+    "color": {
+      "background": true,
+      "custom": true,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [
+        {
+          "colors": ["#000000", "#ffffff"],
+          "name": "Dark to Light",
+          "slug": "dark-to-light"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "Purple to Indigo",
+          "slug": "purple-to-indigo",
+          "gradient": "linear-gradient(135deg, #a855f7 0%, #6366f1 100%)"
+        },
+        {
+          "name": "Blue to Cyan",
+          "slug": "blue-to-cyan",
+          "gradient": "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
+        },
+        {
+          "name": "Orange to Yellow",
+          "slug": "orange-to-yellow",
+          "gradient": "linear-gradient(135deg, #f97316 0%, #eab308 100%)"
+        }
+      ],
+      "palette": [
+        {
+          "color": "#000000",
+          "name": "Black",
+          "slug": "black"
+        },
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#1b2838",
+          "name": "Dark Blue",
+          "slug": "dark-blue"
+        },
+        {
+          "color": "#0f1419",
+          "name": "Dark Gray",
+          "slug": "dark-gray"
+        },
+        {
+          "color": "#a855f7",
+          "name": "Purple",
+          "slug": "purple"
+        },
+        {
+          "color": "#6366f1",
+          "name": "Indigo",
+          "slug": "indigo"
+        },
+        {
+          "color": "#3b82f6",
+          "name": "Blue",
+          "slug": "blue"
+        },
+        {
+          "color": "#f97316",
+          "name": "Orange",
+          "slug": "orange"
+        },
+        {
+          "color": "#06b6d4",
+          "name": "Cyan",
+          "slug": "cyan"
+        },
+        {
+          "color": "#c7d5e0",
+          "name": "Light Text",
+          "slug": "light-text"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "spacing": {
+      "customSpacingSize": true,
+      "spacingSizes": [
+        {
+          "name": "Small",
+          "size": "0.5rem",
+          "slug": "small"
+        },
+        {
+          "name": "Medium",
+          "size": "1rem",
+          "slug": "medium"
+        },
+        {
+          "name": "Large",
+          "size": "2rem",
+          "slug": "large"
+        },
+        {
+          "name": "XL",
+          "size": "3rem",
+          "slug": "xl"
+        },
+        {
+          "name": "2XL",
+          "size": "4rem",
+          "slug": "2xl"
+        },
+        {
+          "name": "3XL",
+          "size": "6rem",
+          "slug": "3xl"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "dropCap": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+          "name": "System Font",
+          "slug": "system-font"
+        },
+        {
+          "fontFamily": "Urbanist, Montserrat, sans-serif",
+          "name": "Urbanist",
+          "slug": "urbanist"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "size": "0.875rem",
+          "slug": "small"
+        },
+        {
+          "name": "Base",
+          "size": "1rem",
+          "slug": "base"
+        },
+        {
+          "name": "Large",
+          "size": "1.125rem",
+          "slug": "large"
+        },
+        {
+          "name": "XL",
+          "size": "1.5rem",
+          "slug": "xl"
+        },
+        {
+          "name": "2XL",
+          "size": "2rem",
+          "slug": "2xl"
+        },
+        {
+          "name": "3XL",
+          "size": "3rem",
+          "slug": "3xl"
+        },
+        {
+          "name": "4XL",
+          "size": "4rem",
+          "slug": "4xl"
+        },
+        {
+          "name": "5XL",
+          "size": "5rem",
+          "slug": "5xl"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "blocks": {},
+    "color": {
+      "background": "#000000",
+      "text": "#c7d5e0"
+    },
+    "elements": {
+      "button": {
+        "appearance": "button",
+        "border": {
+          "radius": "0.5rem"
+        },
+        "color": {
+          "background": "#a855f7",
+          "text": "#ffffff"
+        },
+        "cursor": "pointer",
+        "typography": {
+          "fontWeight": "700"
+        }
+      },
+      "heading": {
+        "color": {
+          "text": "#ffffff"
+        },
+        "typography": {
+          "fontFamily": "Urbanist, Montserrat, sans-serif",
+          "fontWeight": "900"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#66c0f4"
+        },
+        ":hover": {
+          "color": {
+            "text": "#5c9fd6"
+          }
+        }
+      }
+    },
+    "spacing": {
+      "blockGap": "2rem",
+      "padding": "1rem"
+    },
+    "typography": {
+      "fontFamily": "system-font",
+      "fontSize": "1rem",
+      "fontWeight": "400",
+      "lineHeight": "1.6"
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "blank",
+      "postTypes": ["page"],
+      "title": "Blank"
+    }
+  ]
+}

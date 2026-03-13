@@ -1,0 +1,21 @@
+/*
+Theme Name: Gamer Minds
+Theme URI: https://gamerminds.com
+Author: Gamer Minds
+Author URI: https://gamerminds.com
+Description: Professional game localization service website. A Gutenberg block theme built from React page structure.
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gamer-minds-theme
+Domain Path: /languages
+Tags: gamer-minds, localization, games, gutenberg, block-theme
+Requires at least: 6.0
+Requires PHP: 7.4
+*/
+
+/* 
+ * This theme uses CSS custom properties for design system
+ * See theme.json for complete design configuration
+ * Core styles are in assets/css/
+ */

@@ -1,0 +1,25 @@
+{
+  "apiVersion": 2,
+  "name": "acf/private-vault-discretion-section",
+  "title": "Private Vault Discretion Section",
+  "description": "Split content section with left copy and right image.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "private-vault-discretion-section.php"
+  }
+}

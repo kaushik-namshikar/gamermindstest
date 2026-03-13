@@ -1,0 +1,27 @@
+{
+  "apiVersion": 2,
+  "name": "gm/services",
+  "title": "Services Grid",
+  "description": "Display services with icons and descriptions in alternating layout",
+  "category": "formatting",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Our Services"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "services": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true
+  },
+  "render": "file:./render.php",
+  "textdomain": "gamer-minds-theme"
+}

@@ -1,0 +1,23 @@
+.gm-split-cards {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.gm-split-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gm-split-cards__card {
+  min-height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .gm-split-cards__grid {
+    grid-template-columns: 1fr;
+  }
+}

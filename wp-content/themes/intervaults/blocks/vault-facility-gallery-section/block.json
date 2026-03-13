@@ -1,0 +1,25 @@
+{
+  "apiVersion": 2,
+  "name": "acf/vault-facility-gallery-section",
+  "title": "Vault Facility Gallery Section",
+  "description": "Gallery grid section for vault facility images.",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "color": {
+      "text": true,
+      "background": true
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "vault-facility-gallery-section.php"
+  }
+}

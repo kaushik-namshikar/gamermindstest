@@ -1,0 +1,131 @@
+{
+    "key": "group_private_vault_discretion_section",
+    "title": "Private Vault Discretion Section",
+    "fields": [
+        {
+            "key": "field_81a2b3c4",
+            "label": "Eyebrow",
+            "name": "private_vault_discretion_section_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Short label above heading.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_82b3c4d5",
+            "label": "Title",
+            "name": "private_vault_discretion_section_title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Main heading on the left.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_83c4d5e6",
+            "label": "Description",
+            "name": "private_vault_discretion_section_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Supporting copy below title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": 5,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_84d5e6f7",
+            "label": "Button",
+            "name": "private_vault_discretion_section_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_85e6f7a8",
+            "label": "Right Image",
+            "name": "private_vault_discretion_section_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Main image shown on right side.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/private-vault-discretion-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1772070000
+}

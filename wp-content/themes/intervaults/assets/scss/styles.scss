@@ -1,0 +1,38 @@
+@import './variables';
+@import 'header.scss';
+@import 'footer.scss';
+@import '../../blocks/hero-section/hero-section';
+@import '../../blocks/ticker-section/ticker-section';
+@import '../../blocks/who-we-are-section/who-we-are-section';
+
+@import '../../blocks/why-choose-section/why-choose-section';
+@import '../../blocks/amenity-section/amenity-section';
+@import '../../blocks/legacy-section/legacy-section';
+@import '../../blocks/how-it-works-section/how-it-works-section';
+@import '../../blocks/how-it-works-scrolltrigger-section/how-it-works-scrolltrigger-section';
+@import '../../blocks/vault-section/vault-section';
+@import '../../blocks/certifications-section/certifications';
+@import '../../blocks/faq-section/faq-section';
+@import '../../blocks/contact-section/contact-section';
+@import '../../blocks/contact-map-section/contact-map-section';
+@import '../../blocks/security-section/security-section';
+@import '../../blocks/private-vault-discretion-section/private-vault-discretion-section';
+@import '../../blocks/biometric-lockers-section/biometric-lockers-section';
+@import '../../blocks/biometric-lockers-reverse-section/biometric-lockers-reverse-section';
+
+@import '../../blocks/vault-features-section/vault-features-section';
+@import '../../blocks/faq-hero-section/faq-hero-section';
+@import '../../blocks/faq-locker-video-section/faq-locker-video-section';
+@import '../../blocks/faq-faq-section/faq-faq-section';
+@import '../../blocks/faq-cta-section/faq-cta-section';
+@import '../../blocks/au-institutional-foundation-section/au-institutional-foundation-section';
+@import '../../blocks/vs-vault-pricing-section/vs-vault-pricing-section';
+@import '../../blocks/vs-r-vault-section/vs-vault-section';
+@import '../../blocks/vs-b-vault-section/vs-b-vault-section';
+@import '../../blocks/lets-talk-section/lets-talk-section';
+@import '../../blocks/locker-consultation-section/locker-consultation-section';
+
+@import '../../blocks/faq-locker-video-section/faq-locker-video-section';
+@import '../../blocks/private-vault-discretion-section/private-vault-discretion-section';
+@import '../../blocks/vault-facility-gallery-section/vault-facility-gallery-section';
+@import '../../blocks/trusted-privacy-testimonials-section/trusted-privacy-testimonials-section';

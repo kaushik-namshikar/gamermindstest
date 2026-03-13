@@ -1,0 +1,199 @@
+/* Hero Block - Split Paths Layout */
+.gm-hero {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.gm-hero__background {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h50v50H0z' fill='none'/%3E%3Cpath d='M 50 0 L 0 0 0 50' fill='none' stroke='rgba(168,85,247,0.1)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 50px 50px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.gm-hero__inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.gm-hero__card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Developer Side - Left */
+.gm-hero__card--left {
+  background: linear-gradient(135deg, rgba(30, 50, 100, 0.6) 0%, rgba(20, 20, 40, 0.8) 100%);
+}
+
+.gm-hero__card--left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+  clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+  z-index: 0;
+}
+
+.gm-hero__card--left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='rgba(59,130,246,0.08)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+  z-index: 1;
+}
+
+/* Player Side - Right */
+.gm-hero__card--right {
+  background: linear-gradient(135deg, rgba(100, 30, 50, 0.6) 0%, rgba(40, 20, 30, 0.8) 100%);
+}
+
+.gm-hero__card--right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(225deg, rgba(249, 115, 22, 0.15) 0%, transparent 50%);
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 60% 100%);
+  z-index: 0;
+}
+
+.gm-hero__card--right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='rgba(249,115,22,0.08)'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 60% 100%);
+  z-index: 1;
+}
+
+.gm-hero__card-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 400px;
+}
+
+.gm-hero__title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+}
+
+.gm-hero__card--left .gm-hero__title {
+  color: #93c5fd;
+}
+
+.gm-hero__card--right .gm-hero__title {
+  color: #fed7aa;
+}
+
+.gm-hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.gm-hero__card--left .gm-hero__subtitle {
+  color: rgba(147, 197, 253, 0.9);
+}
+
+.gm-hero__card--right .gm-hero__subtitle {
+  color: rgba(254, 215, 170, 0.9);
+}
+
+.gm-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gm-hero__card--left .gm-hero__cta {
+  color: #60a5fa;
+}
+
+.gm-hero__card--left .gm-hero__cta:hover {
+  color: #93c5fd;
+  gap: 1rem;
+}
+
+.gm-hero__card--right .gm-hero__cta {
+  color: #fb923c;
+}
+
+.gm-hero__card--right .gm-hero__cta:hover {
+  color: #fed7aa;
+  gap: 1rem;
+}
+
+.gm-hero__cta-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1.2em;
+}
+
+.gm-hero__cta:hover .gm-hero__cta-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gm-hero {
+    min-height: auto;
+    flex-direction: column;
+    max-height: 200vh;
+  }
+  
+  .gm-hero__inner {
+    flex-direction: column;
+  }
+  
+  .gm-hero__card {
+    flex: 1;
+    min-height: 50vh;
+    padding: 1.5rem;
+  }
+  
+  .gm-hero__title {
+    font-size: 2rem;
+  }
+  
+  .gm-hero__subtitle {
+    font-size: 1rem;
+  }
+}

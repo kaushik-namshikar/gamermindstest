@@ -1,0 +1,19 @@
+{
+  "apiVersion": 2,
+  "name": "acf/faq-section",
+  "title": "FAQ Section",
+  "description": "FAQ Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "faq-section.php"
+  },
+  "editorScript": "file:./faq-section.js",
+  "viewScript": "file:./faq-section.js"
+}

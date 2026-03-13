@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "acf/faq-faq-hero-section",
+  "title": "FAQ FAQ Section",
+  "description": "FAQ FAQ Section",
+  "category": "formatting",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "faq-faq-section.php"
+  }
+}

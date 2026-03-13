@@ -1,0 +1,187 @@
+.gm-hero {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gm-hero__background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(79, 70, 229, 0.25), transparent 55%),
+    radial-gradient(circle at 25% 20%, rgba(251, 147, 56, 0.12), transparent 55%),
+    linear-gradient(135deg, rgba(4, 6, 17, 0.92), rgba(4, 6, 17, 0.92));
+  z-index: 0;
+}
+
+.gm-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: center;
+  padding: 10rem 2rem 6rem;
+}
+
+.gm-hero__card {
+  position: relative;
+  border-radius: var(--gm-radius-lg);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform var(--gm-transition), box-shadow var(--gm-transition);
+}
+
+.gm-hero__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.65);
+}
+
+.gm-hero__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.4), transparent 50%);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.gm-hero__card--orange::before {
+  background: radial-gradient(circle at top right, rgba(251, 147, 56, 0.4), transparent 50%);
+}
+
+.gm-hero__card-content {
+  position: relative;
+  z-index: 2;
+  padding: 3.25rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.gm-hero__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--gm-radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+}
+
+.gm-hero__title {
+  margin: 0;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.gm-hero__subtitle {
+  margin: 0;
+  max-width: 30rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.gm-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.35rem;
+  border-radius: var(--gm-radius-pill);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.92), rgba(96, 165, 250, 0.7));
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--gm-transition), box-shadow var(--gm-transition);
+}
+
+.gm-hero__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 30px 60px rgba(79, 70, 229, 0.45);
+}
+
+.gm-hero__cta svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+@media (max-width: 980px) {
+  .gm-hero__inner {
+    grid-template-columns: 1fr;
+    padding: 8rem 1.5rem 5rem;
+  }
+}
+
+/* Simple grid block */
+.gm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.gm-grid__item {
+  border-radius: var(--gm-radius-lg);
+  padding: 2.2rem 1.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--gm-shadow);
+  transition: transform var(--gm-transition), box-shadow var(--gm-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.gm-grid__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.55);
+}
+
+.gm-grid__item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.3), transparent 55%);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.gm-grid__icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.gm-grid__title {
+  margin: 0 0 0.65rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.gm-grid__description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}

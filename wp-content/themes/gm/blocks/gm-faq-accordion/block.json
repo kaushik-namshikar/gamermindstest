@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gm/faq-accordion",
+  "version": "1.0.0",
+  "title": "FAQ Accordion",
+  "category": "gm",
+  "description": "Collapsible FAQ section with questions and answers.",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Frequently Asked Questions"
+    },
+    "faqs": {
+      "type": "array",
+      "default": [
+        {
+          "question": "How long does game localization take?",
+          "answer": "The timeline depends on the scope of your project, but typically ranges from 2-8 weeks for standard localization projects.",
+          "isOpen": false
+        },
+        {
+          "question": "What languages do you support?",
+          "answer": "We support over 50 languages including major markets like Spanish, French, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, and many more.",
+          "isOpen": false
+        },
+        {
+          "question": "Do you provide voice acting services?",
+          "answer": "Yes, we work with professional voice actors who specialize in gaming and have experience with various game genres and character types.",
+          "isOpen": false
+        }
+      ]
+    }
+  },
+  "textdomain": "gamer-minds-theme",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

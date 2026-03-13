@@ -1,0 +1,164 @@
+//hero section
+.hero {
+    box-sizing: content-box !important;
+
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    max-height: calc(100vh - 69.6px);
+    color: $white;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+
+    /* =========================
+     BACKGROUND
+  ========================= */
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+
+        video,
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* =========================
+     CONTENT
+  ========================= */
+
+    &__content {
+        position: relative;
+        z-index: 3;
+        max-width: 1200px;
+        padding: 0 clamp(20px, 6.25vw, 90px);
+        margin-bottom: 120px;
+        max-width: 690px;
+
+        @media (min-width: 1441px) {
+            padding-left: 0;
+        }
+    }
+
+    &__content-wrapper {
+        @media (min-width: 1441px) {
+            width: 1440px;
+            margin: 0 auto;
+        }
+    }
+
+    &__eyebrow {
+        color: rgba(255, 64, 70, 1);
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        display: block;
+        margin-bottom: 2px;
+        font-family: $secondary-font;
+    }
+
+    &__title {
+        font-size: clamp(32px, 3.9vw, 56px);
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: 0px;
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    /* =========================
+     BUTTONS
+  ========================= */
+
+    .btn {
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn--primary {
+        display: flex;
+        background: $white;
+        color: $black;
+        padding: 11.5px 24px;
+        align-items: center;
+        font-size: 14px;
+        border-radius: 4px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        font-family: $secondary-font;
+        line-height: 1.2;
+        height: 40px;
+
+        @media (max-width: 991.98px) {
+            height: auto;
+        }
+
+
+        &:hover {
+            background: #e6e6e6;
+            transform: translateY(-2px);
+        }
+    }
+
+    .btn--outline {
+        border: 1px solid $white;
+        color: $white;
+        border-radius: 4px;
+        padding: 11.5px 38px;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        height: 40px;
+
+        @media (max-width: 991.98px) {
+            height: auto;
+        }
+
+
+        font-weight: 400;
+        font-family: $secondary-font;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    }
+
+
+
+    /* =========================
+     RESPONSIVE
+  ========================= */
+
+    @media (max-width: 768px) {
+
+
+        &__title {
+            font-size: 34px;
+        }
+
+
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "gm/landing-hero",
+  "title": "Landing Hero — Two Path Split",
+  "description": "Full-screen split hero for the landing page with Dev and Player paths. Mirrors Landing.tsx.",
+  "category": "formatting",
+  "keywords": ["hero", "landing", "split", "gamer minds"],
+  "supports": {
+    "align": ["full"],
+    "html": false
+  },
+  "render": "file:./render.php"
+}
