@@ -27,15 +27,15 @@
             <?php endif; ?>
         </a>
 
-        <!-- Navigation Buttons -->
+        <!-- Navigation pill — matches React Navigation.tsx -->
         <div class="gm-header__actions">
             <a href="<?php echo esc_url( home_url( '/developers' ) ); ?>"
                class="gm-header__btn gm-header__btn--dev <?php echo is_page( 'developers' ) ? 'is-active' : ''; ?>">
-                For Studios
+                Developers
             </a>
             <a href="<?php echo esc_url( home_url( '/players' ) ); ?>"
                class="gm-header__btn gm-header__btn--players <?php echo is_page( 'players' ) ? 'is-active' : ''; ?>">
-                For Players
+                Players
             </a>
         </div>
 
@@ -50,10 +50,10 @@
     <!-- Mobile Menu -->
     <div class="gm-mobile-menu" id="gm-mobile-menu" hidden>
         <a href="<?php echo esc_url( home_url( '/developers' ) ); ?>" class="gm-mobile-menu__link gm-mobile-menu__link--dev">
-            For Studios
+            Developers
         </a>
         <a href="<?php echo esc_url( home_url( '/players' ) ); ?>" class="gm-mobile-menu__link gm-mobile-menu__link--players">
-            For Players
+            Players
         </a>
     </div>
 </header>

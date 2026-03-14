@@ -5,9 +5,11 @@
   "description": "AJAX quote form for studios to request localization quotes. Mirrors the Quote Form section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["form", "quote", "contact"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "REQUEST A QUOTE" },
+    "subheading": { "type": "string", "default": "Share wordcount, languages, and deadline" },
+    "disclaimer": { "type": "string", "default": "We reply within 1\u20132 business days. NDAs welcome." }
   },
   "render": "file:./render.php"
 }

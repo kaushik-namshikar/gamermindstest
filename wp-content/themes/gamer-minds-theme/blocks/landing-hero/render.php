@@ -6,8 +6,18 @@
  * Right = Player path (orange/Users icon)
  * Center = "GAMER MINDS" title + "CHOOSE YOUR PATH" subtitle
  */
-$dev_url     = esc_url( home_url( '/developers' ) );
-$players_url = esc_url( home_url( '/players' ) );
+$a               = $attributes ?? [];
+$dev_url         = esc_url( home_url( '/developers' ) );
+$players_url     = esc_url( home_url( '/players' ) );
+$dev_label       = isset( $a['devLabel'] )        ? $a['devLabel']        : 'DEVELOPER';
+$dev_subtitle    = isset( $a['devSubtitle'] )      ? $a['devSubtitle']     : 'Professional Localization';
+$dev_cta         = isset( $a['devCta'] )           ? $a['devCta']          : 'ENTER';
+$players_label   = isset( $a['playersLabel'] )     ? $a['playersLabel']    : 'PLAYER';
+$players_subtitle = isset( $a['playersSubtitle'] ) ? $a['playersSubtitle'] : 'Voice &amp; Community';
+$players_cta     = isset( $a['playersCta'] )       ? $a['playersCta']      : 'ENTER';
+$center_title    = isset( $a['centerTitle'] )      ? $a['centerTitle']     : 'GAMER MINDS';
+$center_subtitle = isset( $a['centerSubtitle'] )   ? $a['centerSubtitle']  : 'CHOOSE YOUR PATH';
+$learn_more_text = isset( $a['learnMoreText'] )    ? $a['learnMoreText']   : 'Not sure? Learn more';
 ?>
 
 <section class="gm-landing" aria-label="Choose your path">
@@ -43,10 +53,10 @@ $players_url = esc_url( home_url( '/players' ) );
                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                 </svg>
             </div>
-            <h2>DEVELOPER</h2>
-            <p class="gm-landing__subtitle gm-landing__subtitle--blue">Professional Localization</p>
+            <h2><?php echo esc_html( $dev_label ); ?></h2>
+            <p class="gm-landing__subtitle gm-landing__subtitle--blue"><?php echo esc_html( $dev_subtitle ); ?></p>
             <span class="gm-landing__cta gm-landing__cta--blue">
-                <span>ENTER</span>
+                <span><?php echo esc_html( $dev_cta ); ?></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
         </div>
@@ -81,10 +91,10 @@ $players_url = esc_url( home_url( '/players' ) );
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
             </div>
-            <h2>PLAYER</h2>
-            <p class="gm-landing__subtitle gm-landing__subtitle--orange">Voice &amp; Community</p>
+            <h2><?php echo esc_html( $players_label ); ?></h2>
+            <p class="gm-landing__subtitle gm-landing__subtitle--orange"><?php echo esc_html( $players_subtitle ); ?></p>
             <span class="gm-landing__cta gm-landing__cta--orange">
-                <span>ENTER</span>
+                <span><?php echo esc_html( $players_cta ); ?></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
         </div>
@@ -93,11 +103,11 @@ $players_url = esc_url( home_url( '/players' ) );
     <!-- CENTER OVERLAY -->
     <div class="gm-landing__center" aria-hidden="true">
         <div class="gm-landing__title-block gm-fade-in">
-            <h1>GAMER MINDS</h1>
-            <p>CHOOSE YOUR PATH</p>
+            <h1><?php echo esc_html( $center_title ); ?></h1>
+            <p><?php echo esc_html( $center_subtitle ); ?></p>
         </div>
         <button class="gm-landing__learn-more" id="gm-learn-more" aria-label="Learn more about Gamer Minds">
-            <span>Not sure? Learn more</span>
+            <span><?php echo esc_html( $learn_more_text ); ?></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </button>
     </div>

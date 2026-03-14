@@ -5,15 +5,9 @@
   "description": "Scrollable legal content card. Mirrors the content in Privacy.tsx and Legal.tsx.",
   "category": "formatting",
   "keywords": ["policy", "privacy", "legal", "content"],
+  "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "variant": {
-      "type": "string",
-      "default": "privacy"
-    }
-  },
-  "supports": {
-    "align": ["full"],
-    "html": false
+    "variant": { "type": "string", "default": "privacy" }
   },
   "render": "file:./render.php"
 }

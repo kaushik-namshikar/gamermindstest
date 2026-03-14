@@ -5,15 +5,10 @@
   "description": "Header for Privacy and Legal pages with icon, title and date. Mirrors the header in Privacy.tsx and Legal.tsx.",
   "category": "formatting",
   "keywords": ["policy", "privacy", "legal", "header"],
+  "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "variant": {
-      "type": "string",
-      "default": "privacy"
-    }
-  },
-  "supports": {
-    "align": ["full"],
-    "html": false
+    "variant": { "type": "string", "default": "privacy" },
+    "date":    { "type": "string", "default": "Last updated: March 2, 2026" }
   },
   "render": "file:./render.php"
 }

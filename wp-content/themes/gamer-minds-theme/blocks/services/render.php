@@ -5,6 +5,9 @@
  * 4 services with alternating flex-row/flex-row-reverse layout
  * Large circular icons (w-32 h-32) + numbered badge top-right
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] ) ? $a['heading'] : 'SERVICES';
+
 $services = [
     [
         // Globe icon
@@ -49,7 +52,7 @@ $extra_badges = [
 <section class="gm-services" id="services">
 
     <div class="gm-services__heading gm-fade-in">
-        <h2>SERVICES</h2>
+        <h2><?php echo esc_html( $section_heading ); ?></h2>
     </div>
 
     <div class="gm-services__list">

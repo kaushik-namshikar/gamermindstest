@@ -5,9 +5,17 @@
   "description": "Full-screen split hero for the landing page with Dev and Player paths. Mirrors Landing.tsx.",
   "category": "formatting",
   "keywords": ["hero", "landing", "split", "gamer minds"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "devLabel":        { "type": "string", "default": "DEVELOPER" },
+    "devSubtitle":     { "type": "string", "default": "Professional Localization" },
+    "devCta":          { "type": "string", "default": "ENTER" },
+    "playersLabel":    { "type": "string", "default": "PLAYER" },
+    "playersSubtitle": { "type": "string", "default": "Voice & Community" },
+    "playersCta":      { "type": "string", "default": "ENTER" },
+    "centerTitle":     { "type": "string", "default": "GAMER MINDS" },
+    "centerSubtitle":  { "type": "string", "default": "CHOOSE YOUR PATH" },
+    "learnMoreText":   { "type": "string", "default": "Not sure? Learn more" }
   },
   "render": "file:./render.php"
 }

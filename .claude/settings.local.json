@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(php -r \":*)"
+      "Bash(php -r \":*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//opt/homebrew/var/www/gamermindstest/**)",
+      "Bash(done)"
     ]
   }
 }

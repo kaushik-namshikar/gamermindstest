@@ -5,9 +5,10 @@
   "description": "4-column market region cards. Mirrors the Regions section of Players.tsx.",
   "category": "formatting",
   "keywords": ["regions", "markets", "languages"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "Regions we focus on" },
+    "subheading": { "type": "string", "default": "Huge gaming markets often left out" }
   },
   "render": "file:./render.php"
 }

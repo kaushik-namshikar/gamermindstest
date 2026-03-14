@@ -5,9 +5,16 @@
   "description": "Value proposition block with 3 benefit cards. Mirrors the Why Us section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["why us", "value proposition", "benefits"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":     { "type": "string", "default": "Why Us?" },
+    "proposition": { "type": "string", "default": "Gamer Minds combines professional game localization with a growing community of players interested in localized titles." },
+    "card1Title":  { "type": "string", "default": "Professional Localization" },
+    "card1Desc":   { "type": "string", "default": "Native-speaking translators with gaming expertise, editing, and LQA services." },
+    "card2Title":  { "type": "string", "default": "Player Community" },
+    "card2Desc":   { "type": "string", "default": "Access to a growing community of players actively interested in localized titles." },
+    "card3Title":  { "type": "string", "default": "Proven Demand" },
+    "card3Desc":   { "type": "string", "default": "Your games are introduced to players who care about localization and want to experience them." }
   },
   "render": "file:./render.php"
 }

@@ -5,9 +5,9 @@
   "description": "5-step horizontal process flow. Mirrors the Process section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["process", "timeline", "steps"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading": { "type": "string", "default": "OUR PROCESS" }
   },
   "render": "file:./render.php"
 }

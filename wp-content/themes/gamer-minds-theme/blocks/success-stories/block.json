@@ -5,9 +5,10 @@
   "description": "Victory/success story cards. Mirrors the Success Stories section of Players.tsx.",
   "category": "formatting",
   "keywords": ["success", "stories", "shipped"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "Success stories" },
+    "subheading": { "type": "string", "default": "Real campaigns that shipped" }
   },
   "render": "file:./render.php"
 }

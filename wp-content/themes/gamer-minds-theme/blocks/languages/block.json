@@ -5,9 +5,10 @@
   "description": "Tag cloud of supported languages. Mirrors the Languages section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["languages", "localization", "tags"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":      { "type": "string", "default": "LANGUAGES" },
+    "languageList": { "type": "string", "default": "Chinese (Simplified), Chinese (Traditional), French, German, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Spanish (Spain), Spanish (LATAM), Turkish" }
   },
   "render": "file:./render.php"
 }

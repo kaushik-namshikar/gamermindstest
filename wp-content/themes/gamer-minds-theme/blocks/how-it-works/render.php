@@ -4,24 +4,24 @@
  * Mirrors: Players.tsx — How it works Section
  * bg-[#1b2838], steps have bg-[#0e1419] border-l-2 border-[#66c0f4]
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] )    ? $a['heading']    : 'How it works';
+$section_sub     = isset( $a['subheading'] ) ? $a['subheading'] : 'Three steps from vote to localization';
 $steps = [
     [
-        // ArrowUp icon
         'icon'  => '<line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>',
-        'title' => 'Vote',
-        'desc'  => 'Find a game you want in your language. Hit that upvote.',
+        'title' => isset( $a['step1Title'] ) ? $a['step1Title'] : 'Vote',
+        'desc'  => isset( $a['step1Desc'] )  ? $a['step1Desc']  : 'Find a game you want in your language. Hit that upvote.',
     ],
     [
-        // BarChart3 icon
         'icon'  => '<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',
-        'title' => 'We pitch',
-        'desc'  => 'We turn votes into professional data and present it to devs.',
+        'title' => isset( $a['step2Title'] ) ? $a['step2Title'] : 'We pitch',
+        'desc'  => isset( $a['step2Desc'] )  ? $a['step2Desc']  : 'We turn votes into professional data and present it to devs.',
     ],
     [
-        // CheckCircle2 icon
         'icon'  => '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
-        'title' => 'Track',
-        'desc'  => 'Follow progress and celebrate when it ships.',
+        'title' => isset( $a['step3Title'] ) ? $a['step3Title'] : 'Track',
+        'desc'  => isset( $a['step3Desc'] )  ? $a['step3Desc']  : 'Follow progress and celebrate when it ships.',
     ],
 ];
 ?>
@@ -30,8 +30,8 @@ $steps = [
     <div style="max-width:64rem;margin:0 auto;">
 
         <div class="gm-fade-in" style="margin-bottom:2.5rem;">
-            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">How it works</h2>
-            <p style="color:#8f98a0;">Three steps from vote to localization</p>
+            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;"><?php echo esc_html( $section_heading ); ?></h2>
+            <p style="color:#8f98a0;"><?php echo esc_html( $section_sub ); ?></p>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">

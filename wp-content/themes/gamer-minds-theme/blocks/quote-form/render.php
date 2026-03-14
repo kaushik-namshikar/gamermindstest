@@ -4,6 +4,10 @@
  * Mirrors: Developers.tsx — Quote Form (id="quote")
  * Fields: Name, Studio, Email, Wordcount, Target Languages, Notes
  */
+$a          = $attributes ?? [];
+$heading    = isset( $a['heading'] )    ? $a['heading']    : 'REQUEST A QUOTE';
+$subheading = isset( $a['subheading'] ) ? $a['subheading'] : 'Share wordcount, languages, and deadline';
+$disclaimer = isset( $a['disclaimer'] ) ? $a['disclaimer'] : 'We reply within 1–2 business days. NDAs welcome.';
 $nonce = wp_create_nonce( 'gm_quote_form' );
 ?>
 
@@ -11,8 +15,8 @@ $nonce = wp_create_nonce( 'gm_quote_form' );
     <div class="gm-quote-form__inner">
 
         <div class="gm-quote-form__heading gm-fade-in">
-            <h2>REQUEST A QUOTE</h2>
-            <p>Share wordcount, languages, and deadline</p>
+            <h2><?php echo esc_html( $heading ); ?></h2>
+            <p><?php echo esc_html( $subheading ); ?></p>
         </div>
 
         <form class="gm-form gm-fade-in gm-fade-in--delay-1" id="gm-quote-form" novalidate>
@@ -58,7 +62,7 @@ $nonce = wp_create_nonce( 'gm_quote_form' );
             </button>
 
             <p class="gm-form__disclaimer">
-                We reply within 1–2 business days. NDAs welcome.
+                <?php echo esc_html( $disclaimer ); ?>
             </p>
         </form>
     </div>

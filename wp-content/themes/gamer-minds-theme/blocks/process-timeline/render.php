@@ -4,6 +4,9 @@
  * Mirrors: Developers.tsx — Process Section (hidden in React, shown in WP)
  * 5-step horizontal flow: Scope / Prep / Translate / LQA / Deliver
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] ) ? $a['heading'] : 'OUR PROCESS';
+
 $steps = [
     [
         // Target icon
@@ -46,7 +49,7 @@ $steps = [
 <section class="gm-process" id="process">
 
     <div class="gm-process__heading gm-fade-in">
-        <h2>OUR PROCESS</h2>
+        <h2><?php echo esc_html( $section_heading ); ?></h2>
     </div>
 
     <!-- Connection line -->

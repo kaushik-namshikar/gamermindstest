@@ -5,9 +5,16 @@
   "description": "3-step process for players. Mirrors the How It Works section of Players.tsx.",
   "category": "formatting",
   "keywords": ["how it works", "process", "steps"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "How it works" },
+    "subheading": { "type": "string", "default": "Three steps from vote to localization" },
+    "step1Title": { "type": "string", "default": "Vote" },
+    "step1Desc":  { "type": "string", "default": "Find a game you want in your language. Hit that upvote." },
+    "step2Title": { "type": "string", "default": "We pitch" },
+    "step2Desc":  { "type": "string", "default": "We turn votes into professional data and present it to devs." },
+    "step3Title": { "type": "string", "default": "Track" },
+    "step3Desc":  { "type": "string", "default": "Follow progress and celebrate when it ships." }
   },
   "render": "file:./render.php"
 }

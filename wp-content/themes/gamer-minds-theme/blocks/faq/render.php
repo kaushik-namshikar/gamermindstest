@@ -4,6 +4,10 @@
  * Mirrors: Players.tsx — FAQ Section
  * 5-item accordion, bg-[#1b2838], items bg-[#171a21] border border-[#2a475e]
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] )    ? $a['heading']    : 'Common questions';
+$section_sub     = isset( $a['subheading'] ) ? $a['subheading'] : 'Everything you need to know';
+
 $faqs = [
     [
         'q' => 'How is this different from asking on Reddit or forums?',
@@ -32,8 +36,8 @@ $faqs = [
     <div style="max-width:56rem;margin:0 auto;">
 
         <div class="gm-fade-in" style="margin-bottom:2rem;">
-            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">Common questions</h2>
-            <p style="color:#8f98a0;">Everything you need to know</p>
+            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;"><?php echo esc_html( $section_heading ); ?></h2>
+            <p style="color:#8f98a0;"><?php echo esc_html( $section_sub ); ?></p>
         </div>
 
         <div class="gm-accordion" role="list" style="display:flex;flex-direction:column;gap:0.75rem;">

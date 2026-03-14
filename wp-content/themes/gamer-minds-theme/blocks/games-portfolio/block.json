@@ -5,9 +5,10 @@
   "description": "6-column game cover grid. Mirrors the Games Portfolio section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["portfolio", "games", "gallery"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "GAMES WE WORKED ON" },
+    "subheading": { "type": "string", "default": "Trusted by studios across multiple genres" }
   },
   "render": "file:./render.php"
 }

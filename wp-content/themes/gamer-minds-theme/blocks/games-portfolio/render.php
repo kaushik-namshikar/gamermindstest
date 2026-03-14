@@ -4,6 +4,10 @@
  * Mirrors: Developers.tsx — gamesWorkedOn section
  * 6-column grid with Unsplash images and hover overlays
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] )    ? $a['heading']    : 'GAMES WE WORKED ON';
+$section_sub     = isset( $a['subheading'] ) ? $a['subheading'] : 'Trusted by studios across multiple genres';
+
 $games = [
     [
         'title' => 'Fantasy Quest',
@@ -41,8 +45,8 @@ $games = [
 <section class="gm-portfolio" id="portfolio">
 
     <div class="gm-portfolio__heading gm-fade-in">
-        <h2>GAMES WE WORKED ON</h2>
-        <p>Trusted by studios across multiple genres</p>
+        <h2><?php echo esc_html( $section_heading ); ?></h2>
+        <p><?php echo esc_html( $section_sub ); ?></p>
     </div>
 
     <div class="gm-portfolio__grid">

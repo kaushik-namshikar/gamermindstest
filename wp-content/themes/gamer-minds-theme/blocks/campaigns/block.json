@@ -5,9 +5,11 @@
   "description": "3-column campaign cards with vote UI. Mirrors the Active Campaigns section of Players.tsx.",
   "category": "formatting",
   "keywords": ["campaigns", "games", "voting"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":     { "type": "string", "default": "Active campaigns" },
+    "subheading":  { "type": "string", "default": "Help these games reach your region" },
+    "viewAllText": { "type": "string", "default": "View all 150+ campaigns" }
   },
   "render": "file:./render.php"
 }

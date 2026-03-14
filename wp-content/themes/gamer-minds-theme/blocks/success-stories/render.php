@@ -5,6 +5,10 @@
  * bg-gradient-br from-[#1b2838] to-[#0e1419]
  * Cards: bg-[#1b2838] p-5 border-t-2 border-[#5c7e10]
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] )    ? $a['heading']    : 'Success stories';
+$section_sub     = isset( $a['subheading'] ) ? $a['subheading'] : 'Real campaigns that shipped';
+
 $victories = [
     [
         'title'     => 'Crimson Vanguard',
@@ -40,8 +44,8 @@ $victories = [
     <div style="max-width:72rem;margin:0 auto;">
 
         <div class="gm-fade-in" style="margin-bottom:2rem;">
-            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">Success stories</h2>
-            <p style="color:#8f98a0;">Real campaigns that shipped</p>
+            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;"><?php echo esc_html( $section_heading ); ?></h2>
+            <p style="color:#8f98a0;"><?php echo esc_html( $section_sub ); ?></p>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;">

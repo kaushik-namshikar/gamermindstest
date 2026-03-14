@@ -79,7 +79,7 @@ function gm_register_blocks() {
     wp_register_script(
         'gm-blocks-editor',
         get_template_directory_uri() . '/assets/js/editor.js',
-        [ 'wp-blocks', 'wp-element', 'wp-editor' ],
+        [ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-block-editor', 'wp-components', 'wp-i18n' ],
         filemtime( get_template_directory() . '/assets/js/editor.js' ),
         false
     );
@@ -212,7 +212,7 @@ add_filter( 'body_class', 'gm_body_classes' );
 // ─────────────────────────────────────────
 // 8. DISABLE ADMIN BAR ON FRONT-END (optional)
 // ─────────────────────────────────────────
-// add_filter( 'show_admin_bar', '__return_false' );
+add_filter( 'show_admin_bar', '__return_false' );
 
 // ─────────────────────────────────────────
 // 9. REMOVE DEFAULT BLOCK STYLES THAT CONFLICT

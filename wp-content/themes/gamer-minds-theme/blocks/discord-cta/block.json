@@ -5,9 +5,11 @@
   "description": "Community join CTA section. Mirrors the CTA section of Players.tsx.",
   "category": "formatting",
   "keywords": ["cta", "discord", "community"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":     { "type": "string", "default": "You shouldn\u2019t need to learn English to play good games" },
+    "description": { "type": "string", "default": "Your vote shows developers there\u2019s demand (and revenue) in your region." },
+    "ctaLabel":    { "type": "string", "default": "Join the community" }
   },
   "render": "file:./render.php"
 }

@@ -5,9 +5,9 @@
   "description": "Alternating service cards layout. Mirrors the Services section of Developers.tsx.",
   "category": "formatting",
   "keywords": ["services", "localization", "developers"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading": { "type": "string", "default": "SERVICES" }
   },
   "render": "file:./render.php"
 }

@@ -5,9 +5,10 @@
   "description": "Accordion FAQ section. Mirrors the FAQ section of Players.tsx.",
   "category": "formatting",
   "keywords": ["faq", "accordion", "questions"],
-  "supports": {
-    "align": ["full"],
-    "html": false
+  "supports": { "align": ["full"], "html": false },
+  "attributes": {
+    "heading":    { "type": "string", "default": "Common questions" },
+    "subheading": { "type": "string", "default": "Everything you need to know" }
   },
   "render": "file:./render.php"
 }

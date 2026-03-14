@@ -4,6 +4,11 @@
  * Mirrors: Players.tsx — Active Campaigns Section
  * bg-[#171a21], flat Steam-style cards bg-[#1b2838] border-t border-[#2a475e]
  */
+$a            = $attributes ?? [];
+$section_heading = isset( $a['heading'] )     ? $a['heading']     : 'Active campaigns';
+$section_sub     = isset( $a['subheading'] )  ? $a['subheading']  : 'Help these games reach your region';
+$view_all_text   = isset( $a['viewAllText'] ) ? $a['viewAllText'] : 'View all 150+ campaigns';
+
 $campaigns = [
     [
         'title'     => 'Echoes of the Abyss',
@@ -48,8 +53,8 @@ $campaigns = [
     <div class="gm-campaigns__inner" style="max-width:80rem;margin:0 auto;">
 
         <div class="gm-campaigns__heading gm-fade-in" style="margin-bottom:2rem;">
-            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">Active campaigns</h2>
-            <p style="color:#8f98a0;">Help these games reach your region</p>
+            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;"><?php echo esc_html( $section_heading ); ?></h2>
+            <p style="color:#8f98a0;"><?php echo esc_html( $section_sub ); ?></p>
         </div>
 
         <div class="gm-campaigns__grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
@@ -129,7 +134,7 @@ $campaigns = [
 
         <div style="margin-top:1.5rem;" class="gm-fade-in">
             <a href="#" style="display:inline-flex;align-items:center;gap:0.5rem;background:#2a475e;border:none;color:#c7d5e0;font-weight:700;padding:0.625rem 1.25rem;text-decoration:none;transition:background 0.2s;">
-                View all 150+ campaigns
+                <?php echo esc_html( $view_all_text ); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </a>
         </div>

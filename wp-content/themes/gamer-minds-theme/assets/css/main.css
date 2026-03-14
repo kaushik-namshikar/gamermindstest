@@ -100,6 +100,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gm-font-display);
+  line-height: 1.2;
+  margin: 0;
+}
+
 img, video {
   max-width: 100%;
   height: auto;
@@ -176,32 +182,46 @@ button {
 }
 
 /* ─── 5. HEADER ───────────────────────────────────────────── */
+/* Matches React Navigation.tsx exactly: sticky, backdrop-blur-lg, bg-black/50,
+   border-b border-purple-500/20, slide-in animation                          */
+
+/* Slide-in from top — mirrors framer-motion initial={y:-100} animate={y:0} */
+@keyframes gm-header-slide-in {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
 .gm-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--gm-border-subtle);
-  transition: var(--gm-transition);
-}
-
-.gm-header.is-scrolled {
-  background: rgba(0, 0, 0, 0.9);
-  border-bottom-color: var(--gm-border);
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);   /* border-purple-500/20 */
+  animation: gm-header-slide-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 .gm-header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  padding: 1rem 1.5rem;                                /* px-6 py-4 */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Logo */
+/* Logo — h-8 w-auto + hover purple glow (drop-shadow) */
+.gm-header__logo {
+  display: inline-flex;
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gm-header__logo:hover {
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+}
 .gm-header__logo-text {
   display: flex;
   align-items: center;
@@ -223,46 +243,56 @@ button {
   color: var(--gm-text-muted);
 }
 .gm-header__logo-img {
-  height: 36px;
+  height: 2rem;                                        /* h-8 */
   width: auto;
 }
 
-/* Nav buttons */
+/* Actions pill container — bg-purple-950/30 rounded-full p-1 border border-purple-500/30 */
 .gm-header__actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  background: rgba(59, 7, 100, 0.3);                   /* bg-purple-950/30 */
+  border-radius: 9999px;
+  padding: 0.25rem;
+  border: 1px solid rgba(168, 85, 247, 0.3);           /* border-purple-500/30 */
 }
 
+/* Individual nav buttons — px-6 py-2 rounded-full */
 .gm-header__btn {
-  padding: 0.4rem 1rem;
-  border-radius: var(--gm-radius-full);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: var(--gm-transition-fast);
-  border: 1px solid transparent;
+  color: rgba(216, 180, 254, 1);                       /* text-purple-300 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  background: transparent;
 }
 
-.gm-header__btn--dev {
-  color: var(--gm-text-dim);
-  border-color: rgba(118, 119, 255, 0.2);
+/* Developers: active bg-purple-600 shadow-purple-500/50 */
+.gm-header__btn--dev:hover {
+  color: #fff;
+  background: rgba(88, 28, 135, 0.5);                  /* hover:bg-purple-900/50 */
 }
-.gm-header__btn--dev:hover,
 .gm-header__btn--dev.is-active {
-  background: rgba(118, 119, 255, 0.15);
-  border-color: rgba(118, 119, 255, 0.5);
-  color: var(--gm-dev-blue);
+  background: #9333ea;                                  /* bg-purple-600 */
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.5),
+              0 4px 6px -4px rgba(168, 85, 247, 0.5);  /* shadow-purple-500/50 */
 }
 
-.gm-header__btn--players {
-  color: var(--gm-text-dim);
-  border-color: rgba(255, 107, 43, 0.2);
+/* Players: active bg-pink-600 shadow-pink-500/50 */
+.gm-header__btn--players:hover {
+  color: #fff;
+  background: rgba(88, 28, 135, 0.5);
 }
-.gm-header__btn--players:hover,
 .gm-header__btn--players.is-active {
-  background: rgba(255, 107, 43, 0.15);
-  border-color: rgba(255, 107, 43, 0.5);
-  color: var(--gm-player-orange);
+  background: #db2777;                                  /* bg-pink-600 */
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.5),
+              0 4px 6px -4px rgba(236, 72, 153, 0.5);  /* shadow-pink-500/50 */
 }
 
 /* Mobile toggle */
@@ -284,7 +314,9 @@ button {
 .gm-header__mobile-toggle.is-open .gm-header__bar:nth-child(2) { opacity: 0; }
 .gm-header__mobile-toggle.is-open .gm-header__bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile menu */
+/* Mobile menu — hidden by default; JS removes [hidden] to open */
+.gm-mobile-menu[hidden] { display: none !important; }
+
 .gm-mobile-menu {
   display: flex;
   flex-direction: column;
@@ -299,11 +331,11 @@ button {
   font-weight: 500;
   transition: var(--gm-transition-fast);
 }
-.gm-mobile-menu__link--dev  { color: var(--gm-dev-blue); background: rgba(118,119,255,0.08); }
-.gm-mobile-menu__link--players { color: var(--gm-player-orange); background: rgba(255,107,43,0.08); }
+.gm-mobile-menu__link--dev     { color: rgba(216,180,254,1); background: rgba(59,7,100,0.2); }
+.gm-mobile-menu__link--players { color: rgba(216,180,254,1); background: rgba(59,7,100,0.2); }
 
 @media (max-width: 640px) {
-  .gm-header__actions { display: none; }
+  .gm-header__actions       { display: none; }
   .gm-header__mobile-toggle { display: flex; }
 }
 
@@ -1328,47 +1360,75 @@ button {
 }
 
 /* Players Hero */
+/* Players hero — mirrors Players.tsx hero section exactly
+   py-16 px-6, left-aligned, max-w-6xl container / max-w-4xl content */
 .gm-players-hero {
-  padding: calc(64px + 4rem) var(--gm-container-px) 5rem;
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
+  padding: 4rem 1.5rem;          /* py-16 px-6 */
   position: relative;
+  overflow: hidden;
 }
-.gm-players-hero__badge { margin-bottom: 1.5rem; }
+.gm-players-hero__inner {
+  max-width: 64rem;              /* max-w-4xl ≈ 56rem, but inner keeps 64rem for room */
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+/* Badge — inline-flex, #171a21 bg, left-aligned */
+.gm-players-hero__badge {
+  margin-bottom: 1.5rem;         /* mb-6 */
+}
+.gm-players-hero__badge-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #171a21;
+  padding: 0.375rem 0.75rem;     /* px-3 py-1.5 */
+}
+
+/* Title — text-5xl/6xl font-black WHITE, span handles steam-blue */
 .gm-players-hero__title {
   font-family: var(--gm-font-display);
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
-  color: var(--gm-steam-blue);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);  /* text-5xl → text-6xl */
+  font-weight: 900;
+  line-height: 1.1;              /* leading-tight */
+  margin-bottom: 1rem;           /* mb-4 */
+  color: #ffffff;                /* white — <span> carries #66c0f4 */
+  text-align: left;
 }
+
+/* Description — text-xl #c7d5e0, left-aligned */
 .gm-players-hero__desc {
-  font-size: 1.05rem;
-  color: #8f98a0;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.7;
+  font-size: 1.25rem;            /* text-xl */
+  color: #c7d5e0;
+  max-width: 100%;
+  margin: 0 0 2rem;              /* mb-8, NO auto centering */
+  line-height: 1.65;             /* leading-relaxed */
+  text-align: left;
 }
-.gm-players-hero__actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+
+/* Actions — left-aligned flex row */
+.gm-players-hero__actions {
+  display: flex;
+  gap: 0.75rem;                  /* gap-3 */
+  justify-content: flex-start;   /* NOT centered */
+  flex-wrap: wrap;
+  margin-bottom: 2rem;           /* mb-8 */
+}
+
+/* Stats — left-aligned, inline icon+text pairs */
 .gm-players-hero__stats {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: flex-start;   /* NOT centered */
+  gap: 1.5rem;                   /* gap-6 */
   flex-wrap: wrap;
 }
-.gm-players-hero__stat { text-align: center; }
-.gm-players-hero__stat-value {
-  font-family: var(--gm-font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gm-steam-blue);
-}
-.gm-players-hero__stat-label {
-  font-size: 0.8rem;
+.gm-players-hero__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;                   /* gap-2 */
+  font-size: 0.875rem;           /* text-sm */
   color: #8f98a0;
-  margin-top: 0.2rem;
 }
 
 /* Campaigns */
@@ -1732,13 +1792,18 @@ button {
 }
 .gm-accordion__item.is-open .gm-accordion__chevron { transform: rotate(180deg); }
 .gm-accordion__content {
-  display: none;
-  padding: 0 1.25rem 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+  padding: 0 1.25rem;
   font-size: 0.875rem;
   color: #8f98a0;
   line-height: 1.7;
 }
-.gm-accordion__item.is-open .gm-accordion__content { display: block; }
+.gm-accordion__item.is-open .gm-accordion__content {
+  max-height: 400px;
+  padding: 0 1.25rem 1.25rem;
+}
 
 /* ─── 11. POLICY PAGES ───────────────────────────────────── */
 .gm-page--privacy,
@@ -1850,10 +1915,7 @@ button {
 .wp-block-group { margin: 0 !important; padding: 0 !important; }
 .editor-styles-wrapper { background: var(--gm-black) !important; color: var(--gm-text-primary) !important; }
 
-/* No top padding on body since header is fixed */
-body { padding-top: 64px; }
-.gm-page--landing { padding-top: 0; }
-.gm-page--landing .gm-landing { height: calc(100vh - 0px); }
+.gm-page--landing .gm-landing { height: 100vh; }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }

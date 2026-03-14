@@ -4,6 +4,10 @@
  * Mirrors: Players.tsx — targetMarkets section
  * bg-[#171a21], cards bg-[#1b2838] hover:bg-[#2a475e] border-t border-[#2a475e]
  */
+$a = $attributes ?? [];
+$section_heading = isset( $a['heading'] )    ? $a['heading']    : 'Regions we focus on';
+$section_sub     = isset( $a['subheading'] ) ? $a['subheading'] : 'Huge gaming markets often left out';
+
 $regions = [
     [
         'flag'    => '🌎',
@@ -40,8 +44,8 @@ $regions = [
     <div style="max-width:72rem;margin:0 auto;">
 
         <div class="gm-fade-in" style="margin-bottom:2rem;">
-            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;">Regions we focus on</h2>
-            <p style="color:#8f98a0;">Huge gaming markets often left out</p>
+            <h2 style="font-size:1.875rem;font-weight:900;color:#fff;margin-bottom:0.5rem;"><?php echo esc_html( $section_heading ); ?></h2>
+            <p style="color:#8f98a0;"><?php echo esc_html( $section_sub ); ?></p>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
