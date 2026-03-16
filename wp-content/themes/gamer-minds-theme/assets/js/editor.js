@@ -331,7 +331,13 @@
         edit: function(props) {
             return el(Fragment, null,
                 el(InspectorControls, null,
-                    el(PanelBody, { title: 'Form Settings', initialOpen: true },
+                    el(PanelBody, { title: 'Email Recipient', initialOpen: true },
+                        el('p', { style: { fontSize: '12px', color: '#757575', marginBottom: '8px', lineHeight: '1.5' } },
+                            'Quote submissions are sent to this address. Leave blank to use the WordPress admin email.'
+                        ),
+                        txt('Send Quotes To (email)', 'toEmail', props, 'hello@yourstudio.com')
+                    ),
+                    el(PanelBody, { title: 'Form Copy', initialOpen: false },
                         txt('Heading', 'heading', props),
                         txt('Subheading', 'subheading', props),
                         txt('Submit Button Text', 'submitText', props),

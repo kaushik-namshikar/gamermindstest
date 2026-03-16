@@ -10,6 +10,12 @@ $heading    = isset( $a['heading'] )    ? $a['heading']    : 'REQUEST A QUOTE';
 $subheading = isset( $a['subheading'] ) ? $a['subheading'] : 'Share wordcount, languages, and deadline';
 $submit_txt = isset( $a['submitText'] ) ? $a['submitText'] : 'SEND REQUEST';
 $disclaimer = isset( $a['disclaimer'] ) ? $a['disclaimer'] : 'We reply within 1–2 business days. NDAs welcome.';
+
+// Persist recipient email to a WP option so the AJAX handler (outside block context) can read it.
+$to_email = isset( $a['toEmail'] ) ? sanitize_email( $a['toEmail'] ) : '';
+if ( $to_email ) {
+    update_option( 'gm_quote_to_email', $to_email );
+}
 ?>
 <section id="quote-form" style="padding:5rem 1.5rem;">
     <div style="max-width:48rem;margin:0 auto;">

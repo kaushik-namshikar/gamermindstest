@@ -1,0 +1,32 @@
+/**
+ * Editor Canvas Overrides
+ * Loaded inside the Gutenberg iframed canvas via add_editor_style().
+ * Fixes elements that rely on JS-driven classes not available in the editor.
+ */
+
+/* ── Fade-in animations ──────────────────────────────────────
+ * On the frontend, .gm-fade-in starts opacity:0 and the scroll
+ * observer adds .is-visible to show the element. In the editor
+ * there is no scroll observer, so override to always visible.
+ */
+.gm-fade-in,
+.gm-fade-in.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+.gm-fade-in--delay-1,
+.gm-fade-in--delay-2,
+.gm-fade-in--delay-3,
+.gm-fade-in--delay-4,
+.gm-fade-in--delay-5 {
+    transition-delay: 0s !important;
+}
+
+/* ── Block canvas base ───────────────────────────────────────
+ * Ensure the editor body doesn't add unwanted padding/margin
+ * that would shift the full-width dark section backgrounds.
+ */
+body {
+    background: #000 !important;
+}

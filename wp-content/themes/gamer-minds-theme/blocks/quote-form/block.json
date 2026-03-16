@@ -11,7 +11,8 @@
     "subheading":     { "type": "string", "default": "Share wordcount, languages, and deadline" },
     "disclaimer":     { "type": "string", "default": "We reply within 1–2 business days. NDAs welcome." },
     "submitText":     { "type": "string", "default": "Send Request" },
-    "successMessage": { "type": "string", "default": "Thanks! We'll be in touch within 24 hours." }
+    "successMessage": { "type": "string", "default": "Thanks! We'll be in touch within 24 hours." },
+    "toEmail":        { "type": "string", "default": "" }
   },
   "render": "file:./render.php"
 }

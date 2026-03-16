@@ -20,6 +20,7 @@ function gm_theme_setup() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'editor-styles' );
     add_editor_style( 'assets/css/main.css' );
+    add_editor_style( 'assets/css/editor-canvas.css' );
     add_theme_support( 'align-wide' );
     add_theme_support( 'appearance-tools' );
     add_theme_support( 'custom-spacing' );
@@ -122,6 +123,17 @@ function gm_enqueue_block_editor_assets() {
         [ 'gm-google-fonts-editor' ],
         filemtime( get_template_directory() . '/assets/css/main.css' )
     );
+
+    // Override fade-in animation in the editor — elements start opacity:0 on frontend
+    // (waiting for scroll observer), but in the editor they must be immediately visible.
+    wp_add_inline_style( 'gm-editor-styles',
+        '.gm-fade-in { opacity: 1 !important; transform: none !important; }
+         .gm-fade-in--delay-1,
+         .gm-fade-in--delay-2,
+         .gm-fade-in--delay-3,
+         .gm-fade-in--delay-4,
+         .gm-fade-in--delay-5 { transition-delay: 0s !important; }'
+    );
 }
 add_action( 'enqueue_block_editor_assets', 'gm_enqueue_block_editor_assets' );
 
@@ -139,20 +151,42 @@ function gm_handle_quote_form() {
     $notes     = sanitize_textarea_field( wp_unslash( $_POST['notes'] ?? '' ) );
 
     if ( empty( $name ) || empty( $email ) || ! is_email( $email ) ) {
-        wp_send_json_error( [ 'message' => __( 'Please fill in all required fields.', 'gamer-minds' ) ] );
+        wp_send_json_error( [ 'message' => __( 'Please fill in your name and a valid email address.', 'gamer-minds' ) ] );
+        return;
     }
 
-    $to      = get_option( 'admin_email' );
-    $subject = sprintf( __( 'New Quote Request from %s — %s', 'gamer-minds' ), $name, $studio );
-    $body    = "Name: {$name}\nStudio: {$studio}\nEmail: {$email}\nWord Count: {$wordcount}\nTarget Languages: {$languages}\nNotes:\n{$notes}";
-    $headers = [ 'Content-Type: text/plain; charset=UTF-8', "Reply-To: {$email}" ];
+    // Use block-configured recipient → fallback to admin email.
+    $to = get_option( 'gm_quote_to_email' );
+    if ( ! $to || ! is_email( $to ) ) {
+        $to = get_option( 'admin_email' );
+    }
+
+    $subject = sprintf( 'New Quote Request from %s — %s', $name, $studio );
+    $body    = sprintf(
+        "Name: %s\nStudio: %s\nEmail: %s\nWord Count: %s\nTarget Languages: %s\n\nNotes:\n%s",
+        $name, $studio, $email, $wordcount, $languages, $notes
+    );
+    $headers = [
+        'Content-Type: text/plain; charset=UTF-8',
+        'Reply-To: ' . $email,
+    ];
+
+    // Capture wp_mail failure reason.
+    $mail_error = '';
+    $fail_cb = function( $wp_error ) use ( &$mail_error ) {
+        $mail_error = $wp_error->get_error_message();
+    };
+    add_action( 'wp_mail_failed', $fail_cb );
 
     $sent = wp_mail( $to, $subject, $body, $headers );
 
+    remove_action( 'wp_mail_failed', $fail_cb );
+
     if ( $sent ) {
-        wp_send_json_success( [ 'message' => __( "Thanks! We'll be in touch within 24 hours.", 'gamer-minds' ) ] );
+        wp_send_json_success( [ 'message' => __( "Thanks! We'll be in touch within 1–2 business days.", 'gamer-minds' ) ] );
     } else {
-        wp_send_json_error( [ 'message' => __( 'Something went wrong. Please try again.', 'gamer-minds' ) ] );
+        $debug = $mail_error ?: __( 'wp_mail() returned false — check your server mail configuration or install WP Mail SMTP.', 'gamer-minds' );
+        wp_send_json_error( [ 'message' => $debug ] );
     }
 }
 add_action( 'wp_ajax_gm_quote_form',        'gm_handle_quote_form' );
