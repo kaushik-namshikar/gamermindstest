@@ -18,6 +18,10 @@ vendor/
 dist/
 static-export/
 
+# Un-ignore WordPress core dist (Gutenberg block editor scripts needed for deployment)
+!wp-includes/js/dist/
+!wp-includes/js/dist/**
+
 # Environment files
 .env
 .env.local
