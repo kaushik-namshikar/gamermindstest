@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "name": "gm/why-us",
   "title": "Developers — Why Us Section",
-  "description": "Value proposition block with 3 benefit cards. Mirrors the Why Us section of Developers.tsx.",
+  "description": "Value proposition block with 3 benefit cards.",
   "category": "formatting",
   "keywords": ["why us", "value proposition", "benefits"],
   "supports": { "align": ["full"], "html": false },

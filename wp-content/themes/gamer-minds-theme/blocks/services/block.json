@@ -2,12 +2,14 @@
   "apiVersion": 2,
   "name": "gm/services",
   "title": "Developers — Services Section",
-  "description": "Alternating service cards layout. Mirrors the Services section of Developers.tsx.",
+  "description": "Alternating service cards driven by the Services CPT.",
   "category": "formatting",
   "keywords": ["services", "localization", "developers"],
   "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "heading": { "type": "string", "default": "SERVICES" }
+    "heading":      { "type": "string", "default": "SERVICES" },
+    "subheading":   { "type": "string", "default": "Professional game localization services" },
+    "postsPerPage": { "type": "number", "default": -1 }
   },
   "render": "file:./render.php"
 }

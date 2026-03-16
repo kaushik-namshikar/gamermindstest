@@ -2,13 +2,15 @@
   "apiVersion": 2,
   "name": "gm/games-portfolio",
   "title": "Developers — Games Portfolio",
-  "description": "6-column game cover grid. Mirrors the Games Portfolio section of Developers.tsx.",
+  "description": "Game cover grid driven by the Games CPT.",
   "category": "formatting",
   "keywords": ["portfolio", "games", "gallery"],
   "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "heading":    { "type": "string", "default": "GAMES WE WORKED ON" },
-    "subheading": { "type": "string", "default": "Trusted by studios across multiple genres" }
+    "heading":       { "type": "string",  "default": "GAMES WE WORKED ON" },
+    "subheading":    { "type": "string",  "default": "Trusted by studios across multiple genres" },
+    "postsPerPage":  { "type": "number",  "default": 6 },
+    "featuredOnly":  { "type": "boolean", "default": false }
   },
   "render": "file:./render.php"
 }

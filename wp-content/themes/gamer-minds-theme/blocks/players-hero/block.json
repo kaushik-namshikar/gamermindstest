@@ -2,19 +2,22 @@
   "apiVersion": 2,
   "name": "gm/players-hero",
   "title": "Players — Hero Section",
-  "description": "Community hero with stats for the Players page. Mirrors the Hero section of Players.tsx.",
+  "description": "Community hero with stats for the Players page.",
   "category": "formatting",
   "keywords": ["hero", "players", "community"],
   "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "memberCount":    { "type": "string", "default": "5,247 members online" },
-    "title":          { "type": "string", "default": "Get your favorite games in your language" },
-    "description":    { "type": "string", "default": "Vote for games you want localized. We show developers there\u2019s real demand in your region. It\u2019s like an upvote, but for getting devs to actually listen." },
-    "browseLabel":    { "type": "string", "default": "Browse campaigns" },
-    "discordLabel":   { "type": "string", "default": "Join Discord" },
-    "stat1":          { "type": "string", "default": "25 successful campaigns" },
-    "stat2":          { "type": "string", "default": "40+ languages" },
-    "stat3":          { "type": "string", "default": "5,000+ members" }
+    "memberCount":  { "type": "string", "default": "5,247 members online" },
+    "title":        { "type": "string", "default": "Get your favorite games in your language" },
+    "titleSpan":    { "type": "string", "default": "in your language" },
+    "description":  { "type": "string", "default": "Vote for games you want localized. We show developers there's real demand in your region. It's like an upvote, but for getting devs to actually listen." },
+    "browseLabel":  { "type": "string", "default": "Browse campaigns" },
+    "browseLink":   { "type": "string", "default": "#campaigns" },
+    "discordLabel": { "type": "string", "default": "Join Discord" },
+    "discordLink":  { "type": "string", "default": "" },
+    "stat1":        { "type": "string", "default": "25 successful campaigns" },
+    "stat2":        { "type": "string", "default": "40+ languages" },
+    "stat3":        { "type": "string", "default": "5,000+ members" }
   },
   "render": "file:./render.php"
 }

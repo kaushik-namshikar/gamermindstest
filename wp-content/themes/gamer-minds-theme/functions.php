@@ -6,6 +6,13 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // ─────────────────────────────────────────
+// 0. INCLUDES
+// ─────────────────────────────────────────
+require_once get_template_directory() . '/inc/cpt-registration.php';
+require_once get_template_directory() . '/inc/cpt-meta-boxes.php';
+require_once get_template_directory() . '/inc/seed-data.php';
+
+// ─────────────────────────────────────────
 // 1. THEME SETUP
 // ─────────────────────────────────────────
 function gm_theme_setup() {
@@ -79,7 +86,7 @@ function gm_register_blocks() {
     wp_register_script(
         'gm-blocks-editor',
         get_template_directory_uri() . '/assets/js/editor.js',
-        [ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-block-editor', 'wp-components', 'wp-i18n' ],
+        [ 'wp-blocks', 'wp-element', 'wp-editor', 'wp-block-editor', 'wp-components', 'wp-i18n', 'wp-server-side-render' ],
         filemtime( get_template_directory() . '/assets/js/editor.js' ),
         false
     );
@@ -100,10 +107,19 @@ add_action( 'init', 'gm_register_blocks' );
 // Also enqueue the editor script on the block editor screen
 function gm_enqueue_block_editor_assets() {
     wp_enqueue_script( 'gm-blocks-editor' );
+
+    // Load Google Fonts in the editor
+    wp_enqueue_style(
+        'gm-google-fonts-editor',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap',
+        [],
+        null
+    );
+
     wp_enqueue_style(
         'gm-editor-styles',
         get_template_directory_uri() . '/assets/css/main.css',
-        [],
+        [ 'gm-google-fonts-editor' ],
         filemtime( get_template_directory() . '/assets/css/main.css' )
     );
 }
@@ -221,3 +237,16 @@ function gm_dequeue_block_library_theme() {
     wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action( 'wp_enqueue_scripts', 'gm_dequeue_block_library_theme', 100 );
+
+// ─────────────────────────────────────────
+// 10. ONE-TIME SEED TRIGGER
+// URL: /wp-admin/?gm_seed=1 (admin only)
+// ─────────────────────────────────────────
+function gm_seed_trigger() {
+    if ( isset( $_GET['gm_seed'] ) && current_user_can( 'manage_options' ) ) {
+        gm_seed_cpt_data();
+        wp_redirect( admin_url( 'edit.php?post_type=gm_game&gm_seeded=1' ) );
+        exit;
+    }
+}
+add_action( 'admin_init', 'gm_seed_trigger' );

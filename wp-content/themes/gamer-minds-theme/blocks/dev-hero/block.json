@@ -2,22 +2,21 @@
   "apiVersion": 2,
   "name": "gm/dev-hero",
   "title": "Developers — Hero Section",
-  "description": "Two-column hero for the Developers/Studios page. Mirrors the first section of Developers.tsx.",
+  "description": "Two-column hero for the Developers page.",
   "category": "formatting",
   "keywords": ["hero", "developers", "studios"],
-  "supports": {
-    "align": ["full"],
-    "html": false
-  },
+  "supports": { "align": ["full"], "html": false },
   "attributes": {
     "badge":        { "type": "string", "default": "PRODUCTION-READY LOCALIZATION" },
-    "title":        { "type": "string", "default": "Game localization that ships." },
+    "title":        { "type": "string", "default": "Game localization" },
+    "titleAccent":  { "type": "string", "default": "that ships." },
     "description":  { "type": "string", "default": "Translation, editing, and LQA for studios shipping globally — streamlined workflow, single point of contact." },
     "infoText":     { "type": "string", "default": "60%+ of Steam users browse in non-English languages — localization is a growth multiplier" },
     "ctaText":      { "type": "string", "default": "REQUEST QUOTE" },
     "emailLabel":   { "type": "string", "default": "EMAIL US" },
     "emailAddress": { "type": "string", "default": "hello@gamerminds.com" },
-    "heroImage":    { "type": "string", "default": "https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzb2Z0d2FyZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZXxlbnwxfHx8fDE3NzI0MTk1ODB8MA&ixlib=rb-4.1.0&q=80&w=1080" }
+    "heroImage":    { "type": "string", "default": "https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080" },
+    "heroImageAlt": { "type": "string", "default": "Localization dashboard" }
   },
   "render": "file:./render.php"
 }

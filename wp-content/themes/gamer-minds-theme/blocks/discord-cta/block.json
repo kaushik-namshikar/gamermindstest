@@ -2,14 +2,15 @@
   "apiVersion": 2,
   "name": "gm/discord-cta",
   "title": "Players — Discord CTA",
-  "description": "Community join CTA section. Mirrors the CTA section of Players.tsx.",
+  "description": "Community join call-to-action section.",
   "category": "formatting",
   "keywords": ["cta", "discord", "community"],
   "supports": { "align": ["full"], "html": false },
   "attributes": {
-    "heading":     { "type": "string", "default": "You shouldn\u2019t need to learn English to play good games" },
-    "description": { "type": "string", "default": "Your vote shows developers there\u2019s demand (and revenue) in your region." },
-    "ctaLabel":    { "type": "string", "default": "Join the community" }
+    "heading":     { "type": "string", "default": "You shouldn't need to learn English to play good games" },
+    "description": { "type": "string", "default": "Your vote shows developers there's demand (and revenue) in your region." },
+    "ctaLabel":    { "type": "string", "default": "Join the community" },
+    "ctaLink":     { "type": "string", "default": "" }
   },
   "render": "file:./render.php"
 }

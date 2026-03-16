@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "name": "gm/how-it-works",
   "title": "Players — How It Works",
-  "description": "3-step process for players. Mirrors the How It Works section of Players.tsx.",
+  "description": "3-step process for players.",
   "category": "formatting",
   "keywords": ["how it works", "process", "steps"],
   "supports": { "align": ["full"], "html": false },

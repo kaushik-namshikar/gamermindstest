@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "name": "gm/faq",
   "title": "Players — FAQ Accordion",
-  "description": "Accordion FAQ section. Mirrors the FAQ section of Players.tsx.",
+  "description": "Accordion FAQ driven by the FAQ Items CPT.",
   "category": "formatting",
   "keywords": ["faq", "accordion", "questions"],
   "supports": { "align": ["full"], "html": false },
